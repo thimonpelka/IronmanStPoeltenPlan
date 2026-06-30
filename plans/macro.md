@@ -24,10 +24,14 @@ Rough split targets:
 |-----|--------|-------|
 | Swim 1.9km | ~38–42min | Requires technique course + 10 months training |
 | T1 | ~3min | |
-| Bike 90km | ~2:30–2:45h | ~33–36 km/h avg; within reach with structured training |
+| Bike 90km | ~2:45–3:00h | Course has ~900m elevation gain — hilly, not flat; revise after FTP test |
 | T2 | ~2min | |
 | Run 21.1km | ~2:05–2:15h | ~5:55–6:25/km after swim+bike; conservative given brick fatigue |
-| **Total** | **~5:20–5:45h** | Target: sub 5:30 |
+| **Total** | **~5:35–6:00h** | Revise after FTP test and first long hilly ride data |
+
+**Note on bike split**: original estimate assumed a flatter course. ~900m elevation over 90km meaningfully reduces average speed. Bike split target revised to 2:45–3:00h pending better power data. Sub 5:30h total remains the goal — verify feasibility once FTP and climbing pace are established.
+
+**Training implication**: long Saturday rides should regularly include real elevation (aim for 700–1000m on longer rides). Flat Z2 rolls alone are insufficient race preparation.
 
 ---
 

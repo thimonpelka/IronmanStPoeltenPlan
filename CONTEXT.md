@@ -10,7 +10,7 @@ Thimon Pelka. Male, 69kg, Vienna, Austria. Target race: Ironman 70.3 on 2027-05-
 
 **Ironman 70.3** — A triathlon consisting of:
 - Swim: 1.9km
-- Bike: 90km
+- Bike: 90km (~900m elevation gain — moderately hilly course)
 - Run: 21.1km (half marathon)
 
 Target finish time: **sub 5:30h**.
