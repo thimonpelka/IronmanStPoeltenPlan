@@ -119,6 +119,15 @@ def default_time_and_duration(day_abbr, title):
         return ('07:30', 110) if day_abbr == 'Sun' else ('06:30', 60)
     return '07:00', 60
 
+def is_session_paragraph(para):
+    """True if a paragraph is a session header (not an inline description label)."""
+    if not para.startswith('**'):
+        return False
+    # "**Label**: some text" = description label, not a session
+    if re.match(r'\*\*[^*]+\*\*\s*:', para):
+        return False
+    return True
+
 def parse_week_file(path):
     """Parse a weekly plan markdown file. Returns a list of session dicts."""
     text = Path(path).read_text()
@@ -154,25 +163,29 @@ def parse_week_file(path):
         content_end   = headers[i + 1].start() if i + 1 < len(headers) else len(text)
         content       = text[content_start:content_end]
 
-        # Each paragraph starting with ** is a session entry
-        for para in re.split(r'\n\s*\n', content):
-            para = para.strip()
-            if not para or not para.startswith('**'):
-                continue
+        # Split into paragraphs; identify which ones are session starts
+        paragraphs    = [p.strip() for p in re.split(r'\n\s*\n', content) if p.strip()]
+        session_starts = [idx for idx, p in enumerate(paragraphs) if is_session_paragraph(p)]
 
-            first_line = para.split('\n')[0]
+        for j, start_idx in enumerate(session_starts):
+            # Collect this session's header paragraph + all following paragraphs
+            # up to (but not including) the next session header
+            end_idx      = session_starts[j + 1] if j + 1 < len(session_starts) else len(paragraphs)
+            session_paras = paragraphs[start_idx:end_idx]
+
+            header_para = session_paras[0]
+            first_line  = header_para.split('\n')[0]
             bold_m = re.match(r'\*\*(.+?)\*\*(.*)', first_line)
             if not bold_m:
                 continue
 
-            bold_text    = bold_m.group(1)
-            rest_of_line = bold_m.group(2).strip()
+            bold_text = bold_m.group(1)
 
             # Skip rest days
             if re.match(r'rest\b', bold_text, re.IGNORECASE):
                 continue
 
-            # Detect explicit time prefix: "06:30 — Title" or "17:00 — Title"
+            # Detect explicit time prefix: "06:30 — Title"
             time_m = re.match(r'(\d{1,2}:\d{2})\s*[—–-]+\s*(.+)', bold_text)
             if time_m:
                 explicit_time = time_m.group(1)
@@ -181,18 +194,16 @@ def parse_week_file(path):
                 explicit_time = None
                 title         = bold_text.strip()
 
-            sport               = detect_sport(title)
-            duration_min        = parse_duration_minutes(para)
-            def_time, def_dur   = default_time_and_duration(day_abbr, title)
-            start_time          = explicit_time or def_time
-            duration_min        = duration_min or def_dur
+            sport             = detect_sport(title)
+            full_text         = '\n\n'.join(session_paras)
+            duration_min      = parse_duration_minutes(full_text)
+            def_time, def_dur = default_time_and_duration(day_abbr, title)
+            start_time        = explicit_time or def_time
+            duration_min      = duration_min or def_dur
 
-            # Build description: everything after the first line + rest_of_line
-            desc_parts = []
-            if rest_of_line:
-                desc_parts.append(rest_of_line)
-            desc_parts += para.split('\n')[1:]
-            description = f'[{EVENT_TAG}]\n\n' + '\n'.join(desc_parts).strip()
+            # Strip markdown bold markers for a clean calendar description
+            clean_text  = re.sub(r'\*\*(.+?)\*\*', r'\1', full_text)
+            description = f'[{EVENT_TAG}]\n\n' + clean_text
 
             sessions.append({
                 'date':         date,
