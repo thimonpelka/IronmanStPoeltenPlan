@@ -1,0 +1,318 @@
+#!/usr/bin/env python3
+"""
+Sync weekly training plan files to Google Calendar.
+
+Usage:
+    python scripts/sync_calendar.py                   # sync all plan files
+    python scripts/sync_calendar.py 2026-W28          # sync a specific week
+    python scripts/sync_calendar.py 2026-W28 2026-W29 # sync multiple weeks
+    python scripts/sync_calendar.py --clear           # remove all synced events (no re-sync)
+
+First run: opens a browser window for Google OAuth. Saves a token to scripts/token.json
+so subsequent runs are silent.
+
+Put your credentials.json (downloaded from Google Cloud Console) in the scripts/ directory.
+"""
+
+import argparse
+import re
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+try:
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+    from google_auth_oauthlib.flow import InstalledAppFlow
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
+except ImportError:
+    print("Missing dependencies. Run:  pip install -r scripts/requirements.txt")
+    sys.exit(1)
+
+# ── Config ────────────────────────────────────────────────────────────────────
+
+SCOPES      = ['https://www.googleapis.com/auth/calendar.events']
+CALENDAR_ID = 'primary'   # or a specific calendar ID like 'abc@group.calendar.google.com'
+TIMEZONE    = 'Europe/Vienna'
+EVENT_TAG   = 'triathlon-plan'   # stored in extendedProperties — used to find/delete synced events
+
+SCRIPT_DIR = Path(__file__).parent
+REPO_ROOT  = SCRIPT_DIR.parent
+WEEKS_DIR  = REPO_ROOT / 'plans' / 'weeks'
+TOKEN_FILE = SCRIPT_DIR / 'token.json'
+CREDS_FILE = SCRIPT_DIR / 'credentials.json'
+
+# Google Calendar color IDs by sport
+SPORT_COLOR = {
+    'run':        '11',  # Tomato
+    'ride':       '10',  # Basil (dark green)
+    'swim':       '9',   # Blueberry
+    'gym':        '7',   # Peacock (teal)
+    'volleyball': '5',   # Banana
+}
+
+MONTH_NUM = {
+    'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4,
+    'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8,
+    'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12,
+}
+
+# ── Auth ──────────────────────────────────────────────────────────────────────
+
+def get_service():
+    creds = None
+    if TOKEN_FILE.exists():
+        creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            if not CREDS_FILE.exists():
+                print(f"credentials.json not found at {CREDS_FILE}")
+                print("Download it from Google Cloud Console → APIs & Services → Credentials.")
+                sys.exit(1)
+            flow = InstalledAppFlow.from_client_secrets_file(CREDS_FILE, SCOPES)
+            creds = flow.run_local_server(port=0)
+        TOKEN_FILE.write_text(creds.to_json())
+    return build('calendar', 'v3', credentials=creds)
+
+# ── Parsing ───────────────────────────────────────────────────────────────────
+
+def parse_duration_minutes(text):
+    """Extract duration in minutes from strings like ~60min, ~1h, ~1:30h, ~3:15h."""
+    m = re.search(r'~?(\d+)\s*min', text)
+    if m:
+        return int(m.group(1))
+    m = re.search(r'~?(\d+):(\d{2})h', text)
+    if m:
+        return int(m.group(1)) * 60 + int(m.group(2))
+    m = re.search(r'~?(\d+(?:\.\d+)?)\s*h\b', text)
+    if m:
+        return round(float(m.group(1)) * 60)
+    return None
+
+def detect_sport(text):
+    for keyword, sport in [
+        ('swim', 'swim'),
+        ('volleyball', 'volleyball'), ('beach', 'volleyball'),
+        ('gym', 'gym'), ('weight', 'gym'), ('strength', 'gym'),
+        ('ride', 'ride'), ('bike', 'ride'), ('ftp', 'ride'), ('cycling', 'ride'),
+        ('run', 'run'),
+    ]:
+        if keyword in text.lower():
+            return sport
+    return None
+
+def default_time_and_duration(day_abbr, title):
+    """Return (HH:MM, duration_minutes) based on day of week + session keywords."""
+    sport = detect_sport(title)
+    if sport == 'gym':
+        return '06:30', 60
+    if sport == 'volleyball':
+        return '17:00', 120
+    if sport == 'swim':
+        return ('10:00', 60) if day_abbr == 'Sat' else ('17:00', 60)
+    if sport == 'ride':
+        return ('07:00', 195) if day_abbr == 'Sat' else ('07:00', 90)
+    if sport == 'run':
+        return ('07:30', 110) if day_abbr == 'Sun' else ('06:30', 60)
+    return '07:00', 60
+
+def parse_week_file(path):
+    """Parse a weekly plan markdown file. Returns a list of session dicts."""
+    text = Path(path).read_text()
+    year_m = re.search(r'(\d{4})-W\d+', Path(path).name)
+    file_year = int(year_m.group(1)) if year_m else datetime.now().year
+
+    sessions = []
+    header_re = re.compile(r'^###\s+(\w{3})\s+(\w{3})\s+(\d+)', re.MULTILINE)
+    headers = list(header_re.finditer(text))
+
+    year = file_year
+    prev_month = 0
+
+    for i, h in enumerate(headers):
+        day_abbr  = h.group(1)
+        month_str = h.group(2)
+        day_num   = int(h.group(3))
+        month_num = MONTH_NUM.get(month_str, 0)
+        if not month_num:
+            continue
+
+        # Handle year rollover (e.g., a Dec→Jan week)
+        if month_num < prev_month:
+            year += 1
+        prev_month = month_num
+
+        try:
+            date = datetime(year, month_num, day_num)
+        except ValueError:
+            continue
+
+        content_start = h.end()
+        content_end   = headers[i + 1].start() if i + 1 < len(headers) else len(text)
+        content       = text[content_start:content_end]
+
+        # Each paragraph starting with ** is a session entry
+        for para in re.split(r'\n\s*\n', content):
+            para = para.strip()
+            if not para or not para.startswith('**'):
+                continue
+
+            first_line = para.split('\n')[0]
+            bold_m = re.match(r'\*\*(.+?)\*\*(.*)', first_line)
+            if not bold_m:
+                continue
+
+            bold_text    = bold_m.group(1)
+            rest_of_line = bold_m.group(2).strip()
+
+            # Skip rest days
+            if re.match(r'rest\b', bold_text, re.IGNORECASE):
+                continue
+
+            # Detect explicit time prefix: "06:30 — Title" or "17:00 — Title"
+            time_m = re.match(r'(\d{1,2}:\d{2})\s*[—–-]+\s*(.+)', bold_text)
+            if time_m:
+                explicit_time = time_m.group(1)
+                title         = time_m.group(2).strip()
+            else:
+                explicit_time = None
+                title         = bold_text.strip()
+
+            sport               = detect_sport(title)
+            duration_min        = parse_duration_minutes(para)
+            def_time, def_dur   = default_time_and_duration(day_abbr, title)
+            start_time          = explicit_time or def_time
+            duration_min        = duration_min or def_dur
+
+            # Build description: everything after the first line + rest_of_line
+            desc_parts = []
+            if rest_of_line:
+                desc_parts.append(rest_of_line)
+            desc_parts += para.split('\n')[1:]
+            description = f'[{EVENT_TAG}]\n\n' + '\n'.join(desc_parts).strip()
+
+            sessions.append({
+                'date':         date,
+                'day_abbr':     day_abbr,
+                'title':        title,
+                'start_time':   start_time,
+                'duration_min': duration_min,
+                'sport':        sport,
+                'description':  description,
+            })
+
+    return sessions
+
+# ── Calendar operations ───────────────────────────────────────────────────────
+
+def make_event(session):
+    start_dt = datetime.combine(
+        session['date'].date(),
+        datetime.strptime(session['start_time'], '%H:%M').time(),
+    )
+    end_dt = start_dt + timedelta(minutes=session['duration_min'])
+    fmt = '%Y-%m-%dT%H:%M:%S'
+    event = {
+        'summary':     session['title'],
+        'description': session['description'],
+        'start':       {'dateTime': start_dt.strftime(fmt), 'timeZone': TIMEZONE},
+        'end':         {'dateTime': end_dt.strftime(fmt),   'timeZone': TIMEZONE},
+        'extendedProperties': {'private': {'source': EVENT_TAG}},
+    }
+    color = SPORT_COLOR.get(session['sport'])
+    if color:
+        event['colorId'] = color
+    return event
+
+def delete_synced_events(service, date_min, date_max):
+    """Delete all calendar events tagged with EVENT_TAG within the date range."""
+    deleted = 0
+    page_token = None
+    while True:
+        result = service.events().list(
+            calendarId=CALENDAR_ID,
+            timeMin=date_min.isoformat(),
+            timeMax=date_max.isoformat(),
+            privateExtendedProperty=f'source={EVENT_TAG}',
+            pageToken=page_token,
+            maxResults=250,
+        ).execute()
+        for ev in result.get('items', []):
+            service.events().delete(calendarId=CALENDAR_ID, eventId=ev['id']).execute()
+            deleted += 1
+        page_token = result.get('nextPageToken')
+        if not page_token:
+            break
+    return deleted
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(description='Sync training plan to Google Calendar')
+    parser.add_argument('weeks', nargs='*',
+                        help='Week IDs to sync (e.g. 2026-W28). Defaults to all plan files.')
+    parser.add_argument('--clear', action='store_true',
+                        help='Delete all synced events without re-creating them.')
+    args = parser.parse_args()
+
+    service = get_service()
+
+    if args.weeks:
+        week_ids = args.weeks
+    else:
+        week_ids = sorted(
+            p.stem for p in WEEKS_DIR.glob('*.md')
+            if re.match(r'\d{4}-W\d+', p.stem)
+        )
+
+    if not week_ids:
+        print('No week files found.')
+        return
+
+    # Parse all requested week files
+    all_sessions = []
+    for wid in week_ids:
+        path = WEEKS_DIR / f'{wid}.md'
+        if not path.exists():
+            print(f'  Warning: {path.name} not found — skipping.')
+            continue
+        sessions = parse_week_file(path)
+        all_sessions.extend(sessions)
+        print(f'  {wid}: {len(sessions)} session(s) parsed')
+
+    if not all_sessions:
+        print('No sessions to sync.')
+        return
+
+    # Date range covering all parsed sessions
+    dates    = [s['date'] for s in all_sessions]
+    date_min = datetime.combine(min(dates).date(), datetime.min.time(), tzinfo=timezone.utc)
+    date_max = datetime.combine(max(dates).date() + timedelta(days=1), datetime.min.time(), tzinfo=timezone.utc)
+
+    # Clear existing synced events in the date range first
+    deleted = delete_synced_events(service, date_min, date_max)
+    if deleted:
+        print(f'  Cleared {deleted} existing event(s)')
+
+    if args.clear:
+        print('Done (clear only).')
+        return
+
+    # Create events
+    created = 0
+    for s in sorted(all_sessions, key=lambda x: (x['date'], x['start_time'])):
+        try:
+            service.events().insert(calendarId=CALENDAR_ID, body=make_event(s)).execute()
+            label = f"{s['date'].strftime('%a %b %d')}  {s['start_time']}  {s['title']}"
+            print(f'  + {label}')
+            created += 1
+        except HttpError as e:
+            print(f"  ! {s['title']} on {s['date'].date()}: {e}")
+
+    print(f'\nDone. {created} event(s) created.')
+
+if __name__ == '__main__':
+    main()
