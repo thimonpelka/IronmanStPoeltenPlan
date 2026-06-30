@@ -32,9 +32,9 @@ except ImportError:
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-SCOPES      = ['https://www.googleapis.com/auth/calendar.events']
-CALENDAR_ID = 'primary'   # or a specific calendar ID like 'abc@group.calendar.google.com'
-TIMEZONE    = 'Europe/Vienna'
+SCOPES                  = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/calendar.events']
+TRAINING_CALENDAR_NAME  = 'Triathlon Training'
+TIMEZONE                = 'Europe/Vienna'
 EVENT_TAG   = 'triathlon-plan'   # stored in extendedProperties — used to find/delete synced events
 
 SCRIPT_DIR = Path(__file__).parent
@@ -135,7 +135,7 @@ def parse_week_file(path):
     file_year = int(year_m.group(1)) if year_m else datetime.now().year
 
     sessions = []
-    header_re = re.compile(r'^###\s+(\w{3})\s+(\w{3})\s+(\d+)', re.MULTILINE)
+    header_re = re.compile(r'^###\s+(\w{3})\s+(\w{3})\s+(\d+)[^\n]*', re.MULTILINE)
     headers = list(header_re.finditer(text))
 
     year = file_year
