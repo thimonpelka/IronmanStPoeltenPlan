@@ -35,9 +35,9 @@ Rough split targets:
 
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
-| FTP Test (bike) | 2026-06-28 | Pending |
-| Swim technique course | ~2026-07-05 (TBD) | Unscheduled |
-| First structured swim sessions | After swim course | Blocked on above |
+| FTP Test (bike) | 2026-07-04 | Rescheduled (missed 2026-06-27 due to mosquito sting) |
+| Swim technique course | 2026-07-11, 13, 14, 16, 17 | Confirmed |
+| First structured swim sessions | 2026-07-20 (W30) | Tue afternoon + Friday, 2x/week |
 | Open water swim (first) | ~2026-08 | Pending |
 | First Brick session | ~2026-08 | Pending |
 | Half-distance race simulation | ~2027-02 | Planned |
