@@ -219,6 +219,19 @@ def parse_week_file(path):
 
 # ── Calendar operations ───────────────────────────────────────────────────────
 
+def get_or_create_training_calendar(service):
+    """Return the calendarId of the training sub-calendar, creating it if it doesn't exist."""
+    result = service.calendarList().list().execute()
+    for cal in result.get('items', []):
+        if cal.get('summary') == TRAINING_CALENDAR_NAME:
+            return cal['id']
+    new_cal = service.calendars().insert(body={
+        'summary':  TRAINING_CALENDAR_NAME,
+        'timeZone': TIMEZONE,
+    }).execute()
+    print(f'  Created calendar: "{TRAINING_CALENDAR_NAME}"')
+    return new_cal['id']
+
 def make_event(session):
     start_dt = datetime.combine(
         session['date'].date(),
@@ -238,13 +251,13 @@ def make_event(session):
         event['colorId'] = color
     return event
 
-def delete_synced_events(service, date_min, date_max):
+def delete_synced_events(service, calendar_id, date_min, date_max):
     """Delete all calendar events tagged with EVENT_TAG within the date range."""
     deleted = 0
     page_token = None
     while True:
         result = service.events().list(
-            calendarId=CALENDAR_ID,
+            calendarId=calendar_id,
             timeMin=date_min.isoformat(),
             timeMax=date_max.isoformat(),
             privateExtendedProperty=f'source={EVENT_TAG}',
@@ -252,7 +265,7 @@ def delete_synced_events(service, date_min, date_max):
             maxResults=250,
         ).execute()
         for ev in result.get('items', []):
-            service.events().delete(calendarId=CALENDAR_ID, eventId=ev['id']).execute()
+            service.events().delete(calendarId=calendar_id, eventId=ev['id']).execute()
             deleted += 1
         page_token = result.get('nextPageToken')
         if not page_token:
@@ -269,7 +282,8 @@ def main():
                         help='Delete all synced events without re-creating them.')
     args = parser.parse_args()
 
-    service = get_service()
+    service     = get_service()
+    calendar_id = get_or_create_training_calendar(service)
 
     if args.weeks:
         week_ids = args.weeks
@@ -304,7 +318,7 @@ def main():
     date_max = datetime.combine(max(dates).date() + timedelta(days=1), datetime.min.time(), tzinfo=timezone.utc)
 
     # Clear existing synced events in the date range first
-    deleted = delete_synced_events(service, date_min, date_max)
+    deleted = delete_synced_events(service, calendar_id, date_min, date_max)
     if deleted:
         print(f'  Cleared {deleted} existing event(s)')
 
@@ -316,7 +330,7 @@ def main():
     created = 0
     for s in sorted(all_sessions, key=lambda x: (x['date'], x['start_time'])):
         try:
-            service.events().insert(calendarId=CALENDAR_ID, body=make_event(s)).execute()
+            service.events().insert(calendarId=calendar_id, body=make_event(s)).execute()
             label = f"{s['date'].strftime('%a %b %d')}  {s['start_time']}  {s['title']}"
             print(f'  + {label}')
             created += 1
