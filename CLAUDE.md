@@ -67,4 +67,4 @@ Use Strava as the source of truth for what was actually completed. Planned sessi
 - Volleyball Wed evening until ~2026-07-29.
 - Beach volleyball 1–2x/week is a real training load — treat it as such when calculating weekly stress.
 - Swim sessions only start after the technique course is completed (~early July 2026, TBD).
-- Maximum: 2 swim, 2 bike, 2 run sessions per week (not counting gym and volleyball).
+- Maximum: 3 swim, 2 bike, 2 run sessions per week (not counting gym and volleyball). Swim raised from 2→3 on 2026-07-02 — swim is the primary limiter; frequency > duration while the stroke is young (see docs/adr/0003).
