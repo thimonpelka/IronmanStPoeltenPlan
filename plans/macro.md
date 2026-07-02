@@ -48,7 +48,7 @@ needs re-examination. (Deferred pending test result.)
 
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
-| FTP Test (bike) | 2026-07-04 | Rescheduled (missed 2026-06-27 due to mosquito sting) |
+| FTP Test (bike) | 2026-07-03 | Rescheduled (missed 2026-06-27; moved Sat→Fri within W27) |
 | Swim technique course | 2026-07-11, 13, 14, 16, 17 | Confirmed |
 | First structured swim sessions | 2026-07-20 (W30) | Tue afternoon + Friday, 2x/week |
 | Open water swim (first) | ~2026-08 | Pending |
@@ -220,7 +220,7 @@ Deload weeks are good test slots (fresh legs, low surrounding load).
 
 | Test | First | Cadence |
 |------|-------|---------|
-| Bike FTP (20-min) | 2026-07-04 | every ~8 weeks (≈2026-08-29, 10-24, 12-19; 2027-02-13, 04-10) |
+| Bike FTP (20-min) | 2026-07-03 | every ~8 weeks (≈2026-08-28, 10-23, 12-18; 2027-02-12, 04-09) |
 | Run threshold (field test / recent race) | ~2026-08 | every ~8 weeks |
 | Swim CSS (400m + 200m TT) | ~2026-08 (late) | every ~6–8 weeks |
 

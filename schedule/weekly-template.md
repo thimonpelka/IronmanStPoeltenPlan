@@ -62,4 +62,4 @@ Floating sessions (second run, second bike, swim) are scheduled by me on Thu/Fri
 
 ## Note: Wednesday Volleyball
 
-Beach volleyball training on Wednesday evenings (~17:00–19:00) is a fixed commitment **until approximately 2026-07-29** (6 weeks from 2026-06-16). After that date, Wednesday evenings are free. Update this file or tell me in chat when this changes.
+Beach volleyball training on Wednesday evenings (~17:00–19:00) is a fixed commitment **until approximately 2026-07-29** (final session in W31). After that date, Wednesday evenings are free and become the **3rd weekly swim slot** (swim cap raised 2→3×/week, 2026-07-02 — see docs/adr/0003). This transition takes effect from **W32 (2026-08-05)**. Update this file after the last volleyball session, or tell me in chat when it changes.

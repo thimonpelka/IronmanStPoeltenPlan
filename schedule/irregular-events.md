@@ -22,4 +22,5 @@ Add entries here directly, or tell me in chat and I will update this file.
 
 ## Past Events
 
-- 2026-06-27: FTP test missed — mosquito sting on feet (end of W25/start W26) disrupted training; did group ride instead. FTP test rescheduled to 2026-07-04.
+- 2026-07-02: W27 Thursday mid-week ride not done — taken as rest. FTP test moved from Sat Jul 4 to **Fri Jul 3**; Saturday returns to a normal endurance ride. Affects W27 only.
+- 2026-06-27: FTP test missed — mosquito sting on feet (end of W25/start W26) disrupted training; did group ride instead. FTP test rescheduled to 2026-07-04 (then to 2026-07-03, see above).
