@@ -6,6 +6,7 @@ Usage:
     python scripts/sync_calendar.py                   # sync all plan files
     python scripts/sync_calendar.py 2026-W28          # sync a specific week
     python scripts/sync_calendar.py 2026-W28 2026-W29 # sync multiple weeks
+    python scripts/sync_calendar.py --dry-run         # preview parsing only (no auth, no writes)
     python scripts/sync_calendar.py --clear           # remove all synced events (no re-sync)
 
 First run: opens a browser window for Google OAuth. Saves a token to scripts/token.json
@@ -27,7 +28,7 @@ try:
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
 except ImportError:
-    print("Missing dependencies. Run:  pip install -r scripts/requirements.txt")
+    print("Missing dependencies. Run:  uv sync   (or: uv pip install google-auth-oauthlib google-api-python-client google-auth-httplib2)")
     sys.exit(1)
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -80,16 +81,23 @@ def get_service():
 # ── Parsing ───────────────────────────────────────────────────────────────────
 
 def parse_duration_minutes(text):
-    """Extract duration in minutes from strings like ~60min, ~1h, ~1:30h, ~3:15h."""
-    m = re.search(r'~?(\d+)\s*min', text)
-    if m:
-        return int(m.group(1))
+    """Extract duration in minutes from strings like ~60min, ~1h, ~1:30h, ~3:15h.
+
+    Hour formats are checked before the bare-minutes pattern on purpose: a multi-part
+    session like a brick ("~2:30h ride ... 15min run") should resolve to the longer
+    figure, not the first "15min" it stumbles across. Bricks report the ride portion
+    (~2:30h); the short transition run isn't summed in — put a total in the header if
+    you want the full block on the calendar.
+    """
     m = re.search(r'~?(\d+):(\d{2})h', text)
     if m:
         return int(m.group(1)) * 60 + int(m.group(2))
     m = re.search(r'~?(\d+(?:\.\d+)?)\s*h\b', text)
     if m:
         return round(float(m.group(1)) * 60)
+    m = re.search(r'~?(\d+)\s*min', text)
+    if m:
+        return int(m.group(1))
     return None
 
 def detect_sport(text):
@@ -97,6 +105,8 @@ def detect_sport(text):
         ('swim', 'swim'),
         ('volleyball', 'volleyball'), ('beach', 'volleyball'),
         ('gym', 'gym'), ('weight', 'gym'), ('strength', 'gym'),
+        # 'brick' and 'spin' before 'run' so a brick/spin isn't mislabelled a run
+        ('brick', 'ride'), ('spin', 'ride'), ('trainer', 'ride'),
         ('ride', 'ride'), ('bike', 'ride'), ('ftp', 'ride'), ('cycling', 'ride'),
         ('run', 'run'),
     ]:
@@ -185,14 +195,19 @@ def parse_week_file(path):
             if re.match(r'rest\b', bold_text, re.IGNORECASE):
                 continue
 
-            # Detect explicit time prefix: "06:30 — Title"
-            time_m = re.match(r'(\d{1,2}:\d{2})\s*[—–-]+\s*(.+)', bold_text)
+            # Detect explicit time prefix: "06:30 — Title" or "~17:00 — Title"
+            time_m = re.match(r'~?\s*(\d{1,2}:\d{2})\s*[—–-]+\s*(.+)', bold_text)
             if time_m:
                 explicit_time = time_m.group(1)
                 title         = time_m.group(2).strip()
             else:
                 explicit_time = None
                 title         = bold_text.strip()
+
+            # Strip a leading slot-label prefix ("Afternoon — Swim" → "Swim"),
+            # but only when the day-part word is directly followed by the dash
+            # (so "Morning Run — Tempo" keeps its "Morning Run" name).
+            title = re.sub(r'^(Morning|Afternoon|Evening|Night)\s*[—–-]+\s*', '', title)
 
             sport             = detect_sport(title)
             full_text         = '\n\n'.join(session_paras)
@@ -280,10 +295,10 @@ def main():
                         help='Week IDs to sync (e.g. 2026-W28). Defaults to all plan files.')
     parser.add_argument('--clear', action='store_true',
                         help='Delete all synced events without re-creating them.')
+    parser.add_argument('--dry-run', action='store_true',
+                        help='Parse and print what would be synced, without touching the '
+                             'calendar (no auth needed). Use this to validate parsing.')
     args = parser.parse_args()
-
-    service     = get_service()
-    calendar_id = get_or_create_training_calendar(service)
 
     if args.weeks:
         week_ids = args.weeks
@@ -297,7 +312,7 @@ def main():
         print('No week files found.')
         return
 
-    # Parse all requested week files
+    # Parse all requested week files (local — no auth required yet)
     all_sessions = []
     for wid in week_ids:
         path = WEEKS_DIR / f'{wid}.md'
@@ -311,6 +326,20 @@ def main():
     if not all_sessions:
         print('No sessions to sync.')
         return
+
+    # Dry run: preview parsed sessions and stop before any calendar access.
+    if args.dry_run:
+        print('\n── DRY RUN — nothing written to the calendar ──')
+        for s in sorted(all_sessions, key=lambda x: (x['date'], x['start_time'])):
+            dur = f"{s['duration_min']}min" if s['duration_min'] else '?'
+            sport = s['sport'] or '—'
+            print(f"  {s['date'].strftime('%a %b %d')}  {s['start_time']}  "
+                  f"{dur:>7}  [{sport:^10}]  {s['title']}")
+        print(f"\n{len(all_sessions)} session(s) would be synced.")
+        return
+
+    service     = get_service()
+    calendar_id = get_or_create_training_calendar(service)
 
     # Date range covering all parsed sessions
     dates    = [s['date'] for s in all_sessions]

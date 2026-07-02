@@ -1,7 +1,7 @@
 [project]
 name = "triathlon-training-plan"
 version = "0.1.0"
-description = "Add your description here"
+description = "Personal Ironman 70.3 training plan (race 2027-05-23) — a Claude-managed rolling plan plus a Google Calendar sync script."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ['google-auth-oauthlib','google-api-python-client','google-auth-httplib2']

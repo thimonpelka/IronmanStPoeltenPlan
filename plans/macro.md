@@ -99,6 +99,9 @@ running off the bike**, not 5k speed. Bias the training accordingly:
 
 ## Strength Periodization
 
+The concrete program (movements, sets/reps, sample sessions) lives in
+[`plans/strength.md`](strength.md). Summary of the periodization:
+
 "Gym 2×" should not be one generic block for 47 weeks — it periodizes with the plan and
 must not compromise key sessions:
 

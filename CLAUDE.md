@@ -26,8 +26,11 @@ schedule/
   irregular-events.md   ← one-time day blockers (edit or update via chat)
 plans/
   macro.md              ← full periodization skeleton, phases, milestones
+  strength.md           ← periodized gym program
   weeks/
     YYYY-WNN.md         ← detailed weekly plan files (ISO week format)
+scripts/
+  sync_calendar.py      ← push weekly plans to Google Calendar (see README)
 docs/adr/               ← architecture decision records
 ```
 
