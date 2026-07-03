@@ -8,6 +8,10 @@ Usage:
     python scripts/sync_calendar.py 2026-W28 2026-W29 # sync multiple weeks
     python scripts/sync_calendar.py --dry-run         # preview parsing only (no auth, no writes)
     python scripts/sync_calendar.py --clear           # remove all synced events (no re-sync)
+    python scripts/sync_calendar.py --include-past     # also sync sessions that already started
+
+By default only upcoming sessions are synced; sessions whose start time is already in the
+past are skipped and any already-synced past events are left untouched (kept as history).
 
 First run: opens a browser window for Google OAuth. Saves a token to scripts/token.json
 so subsequent runs are silent.
@@ -247,11 +251,15 @@ def get_or_create_training_calendar(service):
     print(f'  Created calendar: "{TRAINING_CALENDAR_NAME}"')
     return new_cal['id']
 
-def make_event(session):
-    start_dt = datetime.combine(
+def session_start_dt(session):
+    """Local (naive) start datetime for a session, from its date + start_time."""
+    return datetime.combine(
         session['date'].date(),
         datetime.strptime(session['start_time'], '%H:%M').time(),
     )
+
+def make_event(session):
+    start_dt = session_start_dt(session)
     end_dt = start_dt + timedelta(minutes=session['duration_min'])
     fmt = '%Y-%m-%dT%H:%M:%S'
     event = {
@@ -298,6 +306,9 @@ def main():
     parser.add_argument('--dry-run', action='store_true',
                         help='Parse and print what would be synced, without touching the '
                              'calendar (no auth needed). Use this to validate parsing.')
+    parser.add_argument('--include-past', action='store_true',
+                        help='Also sync sessions whose start time is already in the past. '
+                             'By default only upcoming sessions are synced.')
     args = parser.parse_args()
 
     if args.weeks:
@@ -322,6 +333,17 @@ def main():
         sessions = parse_week_file(path)
         all_sessions.extend(sessions)
         print(f'  {wid}: {len(sessions)} session(s) parsed')
+
+    # By default, only sync upcoming sessions — drop any whose start time has already passed.
+    # The clear/create date range below is derived from what remains, so already-synced past
+    # events stay on the calendar as history rather than being deleted.
+    if not args.include_past:
+        now = datetime.now()
+        upcoming = [s for s in all_sessions if session_start_dt(s) >= now]
+        skipped  = len(all_sessions) - len(upcoming)
+        if skipped:
+            print(f'  Skipped {skipped} past session(s) — use --include-past to include them.')
+        all_sessions = upcoming
 
     if not all_sessions:
         print('No sessions to sync.')
