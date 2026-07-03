@@ -10,7 +10,8 @@
 | Strength | Active | 2x/week gym, consistent habit |
 | Volleyball | Active | 1–2x/week, serious commitment |
 
-**FTP**: 133W (Strava estimate — likely underestimated, proper test needed in Base phase)
+**FTP**: **238W** (3.45 W/kg @ 69kg) — tested 2026-07-03 (20-min power 251W × 0.95). Confirms
+the strong-cyclist assessment; the 133W Strava estimate was invalid. Retest ~2026-08-28.
 **Run pace zones**: Based on estimated 5k of 19:55
 
 ---
@@ -24,23 +25,29 @@ Rough split targets:
 |-----|--------|-------|
 | Swim 1.9km | ~38–42min | Requires technique course + 10 months training |
 | T1 | ~3min | |
-| Bike 90km | ~2:45–3:00h | Course has ~900m elevation gain — hilly, not flat; revise after FTP test |
+| Bike 90km | ~2:40–2:55h | ~900m elevation. At NP ~178–186W (IF 0.75–0.78 on FTP 238W) this holds |
 | T2 | ~2min | |
 | Run 21.1km | ~2:05–2:15h | ~5:55–6:25/km after swim+bike; conservative given brick fatigue |
-| **Total** | **~5:35–6:00h** | Revise after FTP test and first long hilly ride data |
+| **Total** | **~5:20–5:45h** | FTP tested at 238W — sub-5:30 is realistic, swim + run durability are now the deciders |
 
-**Note on bike split**: original estimate assumed a flatter course. ~900m elevation over 90km meaningfully reduces average speed. Bike split target revised to 2:45–3:00h pending better power data. Sub 5:30h total remains the goal — verify feasibility once FTP and climbing pace are established.
+**Bike split — reconciled with tested FTP (2026-07-03)**: FTP came in at **238W (3.45 W/kg)**,
+comfortably in the "strong cyclist" range and far above the invalid 133W estimate. A 70.3
+bike leg is ridden at IF ~0.75–0.80; targeting **NP ~178–186W** on the hilly course yields a
+**~2:40–2:55h split** and — critically — leaves the legs intact for the run. Climbs may surge
+to low Z4 (~210–220W) but the *normalized* power must stay capped; over-biking the climbs is
+the classic way to wreck the half-marathon. **Sub-5:30 is now realistic**; the binding
+constraints are the swim (built from zero) and run durability off the bike, not bike power.
 
-**Training implication**: long Saturday rides should regularly include real elevation (aim for 700–1000m on longer rides). Flat Z2 rolls alone are insufficient race preparation.
+**Training implication**: long Saturday rides should regularly include real elevation (aim for
+700–1000m on longer rides). Flat Z2 rolls alone are insufficient race preparation. Now that
+zones are power-based, prescribe the mid-week ride in watts: sweet-spot (Z3–low-Z4, ~190–225W)
+in Build, race-pace/threshold in Peak.
 
 **Bike is the biggest time lever and the athlete only gets 2 rides/week** (CLAUDE.md
 constraint). Both must earn their place: the Saturday ride carries volume + climbing, and
 the mid-week ride carries the intensity (sweet-spot in Build → race-pace/threshold in
-Peak), grown in duration on Thursday's open day. The **FTP number (133W) is a known-bad
-Strava estimate**; a proper test is scheduled 2026-07-04. Until then prescribe the bike by
-HR/RPE. **After the test, revisit this whole section**: if FTP lands ~200W+ the "strong
-cyclist" story and the 2:45–3:00 split hold; if it is genuinely low, the sub-5:30 target
-needs re-examination. (Deferred pending test result.)
+Peak), grown in duration on Thursday's open day. Retest FTP ~2026-08-28 on fresh legs (the
+test-day legs were slightly fatigued, so 238W may be a mild under-read).
 
 ---
 
@@ -48,7 +55,7 @@ needs re-examination. (Deferred pending test result.)
 
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
-| FTP Test (bike) | 2026-07-03 | Rescheduled (missed 2026-06-27; moved Sat→Fri within W27) |
+| FTP Test (bike) | 2026-07-03 | ✅ Done — 238W (3.45 W/kg). Next ~2026-08-28 |
 | Swim technique course | 2026-07-11, 13, 14, 16, 17 | Confirmed |
 | First structured swim sessions | 2026-07-20 (W30) | Tue afternoon + Friday, 2x/week |
 | Open water swim (first) | ~2026-08 | Pending |
@@ -223,7 +230,7 @@ Deload weeks are good test slots (fresh legs, low surrounding load).
 
 | Test | First | Cadence |
 |------|-------|---------|
-| Bike FTP (20-min) | 2026-07-03 | every ~8 weeks (≈2026-08-28, 10-23, 12-18; 2027-02-12, 04-09) |
+| Bike FTP (20-min) | 2026-07-03 ✅ (238W) | every ~8 weeks (≈2026-08-28, 10-23, 12-18; 2027-02-12, 04-09) |
 | Run threshold (field test / recent race) | ~2026-08 | every ~8 weeks |
 | Swim CSS (400m + 200m TT) | ~2026-08 (late) | every ~6–8 weeks |
 
@@ -235,8 +242,8 @@ After each test: update zones in `STATUS.md` and re-derive the affected prescrip
 
 Zones must come from a **tested threshold**, not estimates or age formulas:
 
-- **Bike**: % of tested FTP (Coggan-style). Until 2026-07-04 the 133W estimate is invalid
-  — ride by HR/RPE.
+- **Bike**: % of tested FTP (Coggan-style). **FTP = 238W (tested 2026-07-03)** — zones live
+  in `STATUS.md`. Prescribe rides in watts from W28 onward.
 - **Run**: pace + HR anchored to a tested threshold pace (from the run field test), not
   from an estimated 5k.
 - **Swim**: pace zones from CSS.

@@ -1,6 +1,6 @@
 # Training Status
 
-_Last updated: 2026-07-02_
+_Last updated: 2026-07-03_
 
 ## Current State
 
@@ -12,15 +12,29 @@ _Last updated: 2026-07-02_
 | Loading cycle | 3:1 in Base/Build (see macro *Loading Rhythm*). Next deload: **W32** (post swim-course block) |
 | Weeks to race | ~47 |
 
-## Fitness Snapshot (from Strava, 2026-06-30)
+## Fitness Snapshot (from Strava, 2026-07-03)
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Estimated 5k | ~19:55 | Strava prediction |
-| FTP | 133W (known-bad estimate) | Strava — **proper test 2026-07-03** |
+| Estimated 5k | ~21:03 | Strava prediction (heat-affected; run field test due ~Aug) |
+| **FTP** | **238W** (3.45 W/kg @ 69kg) — 20-min power 251W × 0.95 | **Tested 2026-07-03** |
 | Swim fitness | None | Technique course starts 2026-07-11 |
 | Long run (recent) | 15km @ Z2 (2026-06-27, cut short — heat) | Strava |
 | Long ride (recent) | 73km easy group ride (2026-06-28) | Strava |
+
+### Bike Power Zones (Coggan, FTP 238W — set 2026-07-03)
+
+| Zone | Watts | | Zone | Watts |
+|------|-------|-|------|-------|
+| Z1 Recovery | ≤130 | | Z4 Threshold | 215–250 |
+| Z2 Endurance | 131–178 | | Z5 VO2 | 251–286 |
+| Z3 Tempo | 179–214 | | Z6 Anaerobic | 287–357 |
+
+Sweet-spot (88–94%) = **209–224W**.
+
+Note: legs were slightly tired at the test → 238W may be a mild under-read; retest on fresh
+legs at the next deload (~2026-08-28). **Race bike target: NP ~178–186W (IF ~0.75–0.78),
+surges to ~215–225W on climbs only.**
 
 ## Recent Plan Review (2026-07-02)
 
@@ -45,8 +59,9 @@ Full macro review completed — see ADR 0002 (loading rhythm + phase rebalance) 
 
 ## Next Actions
 
-- [ ] **Complete FTP test Fri 2026-07-03** (protocol in W27 plan)
-- [ ] Record FTP result here; update `macro.md` FTP line + **revisit the bike-split section** with the real number; set bike power zones for W28+
+- [x] **FTP test done 2026-07-03** — 20-min 251W → FTP 238W (3.45 W/kg)
+- [x] FTP recorded; `macro.md` FTP line + bike-split section revisited with real number; power zones set (above)
+- [x] W28–W33 mid-week + long rides prescribed in watts (2026-07-03)
 - [ ] Volleyball final session ~2026-07-29 (W31 Wed) → update `schedule/weekly-template.md`; Wed evening becomes 3rd swim slot from W32
 - [ ] After swim course (ends 2026-07-17): first independent swims W30 (Tue+Fri); 3rd swim added W32
 - [ ] Schedule a run threshold field test (~Aug) and swim CSS test (~late Aug) per macro testing cadence
@@ -67,7 +82,7 @@ Full macro review completed — see ADR 0002 (loading rhythm + phase rebalance) 
 
 | Milestone | Status |
 |-----------|--------|
-| FTP Test | **2026-07-03** (moved Sat→Fri within W27) |
+| FTP Test | ✅ **Done 2026-07-03** — 238W (3.45 W/kg). Retest ~2026-08-28 |
 | Swim technique course | Confirmed: **2026-07-11, 13, 14, 16, 17** |
 | First structured swim | **2026-07-20 (W30)** — Tue + Friday |
 | Swim → 3×/week | **W32 (2026-08-05)** — Wed evening slot (post-volleyball) |
