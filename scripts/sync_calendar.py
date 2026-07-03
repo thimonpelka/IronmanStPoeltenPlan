@@ -128,10 +128,10 @@ def default_time_and_duration(day_abbr, title):
     if sport == 'swim':
         return ('10:00', 60) if day_abbr == 'Sat' else ('17:00', 60)
     if sport == 'ride':
-        return ('07:00', 195) if day_abbr == 'Sat' else ('07:00', 90)
+        return ('08:00', 195) if day_abbr == 'Sat' else ('08:00', 90)
     if sport == 'run':
-        return ('07:30', 110) if day_abbr == 'Sun' else ('06:30', 60)
-    return '07:00', 60
+        return ('08:00', 110) if day_abbr == 'Sun' else ('08:00', 60)
+    return '08:00', 60
 
 def is_session_paragraph(para):
     """True if a paragraph is a session header (not an inline description label)."""
