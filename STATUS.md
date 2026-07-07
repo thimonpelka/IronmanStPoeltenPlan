@@ -1,6 +1,6 @@
 # Training Status
 
-_Last updated: 2026-07-03_
+_Last updated: 2026-07-07_
 
 ## Current State
 
@@ -9,7 +9,7 @@ _Last updated: 2026-07-03_
 | Phase | Base (Phase 1) |
 | Phase week | 3 of 14 |
 | Plan week | 2026-W27 (starting 2026-06-29) |
-| Loading cycle | 3:1 in Base/Build (see macro *Loading Rhythm*). Next deload: **W32** (post swim-course block) |
+| Loading cycle | 3:1 in Base/Build (see macro *Loading Rhythm*). Accounting (2026-07-07): W26–W28 were light-by-disruption; **W29–W31 = the loading triple → W32 deload**. W29 kept at full written volume by athlete decision (see W29 file) |
 | Weeks to race | ~47 |
 
 ## Fitness Snapshot (from Strava, 2026-07-03)
@@ -35,6 +35,22 @@ Sweet-spot (88–94%) = **209–224W**.
 Note: legs were slightly tired at the test → 238W may be a mild under-read; retest on fresh
 legs at the next deload (~2026-08-28). **Race bike target: NP ~178–186W (IF ~0.75–0.78),
 surges to ~215–225W on climbs only.**
+
+## Plan Review (2026-07-07) — weakness grill
+
+Full weakness review + grilling session. Decisions (all applied to the docs):
+- **Indoor smart trainer by 2026-10-31** (ADR 0004) — solves the Build-2 winter bike gap;
+  "no bike before work" constraint softened to outdoor-only.
+- **Session caps are soft defaults**, not hard limits (CLAUDE.md reworded).
+- **Gym split swapped**: Wed 06:30 = lower body (primary), Mon = upper at flexible time —
+  Monday-morning skips were structural (post-long-run late Sundays). Strength adaptation
+  **restarted W28–W31** (hand injury cost the original block); heavy 4×5–6 from **W33**.
+- June volleyball spike (~10–14.5h/wk in W25–26) recognized as an outlier, winding down.
+- **W29 kept at full volume** by athlete decision; escape hatch added (cut Sat ride if
+  arriving tired at swim sessions). Cycle accounting: W29–31 = loading triple → W32 deload.
+- **Heat rule concrete**: weekend long sessions roll by 07:00–07:30 through ~end Aug.
+- No fixed tune-up race (spontaneous only). Wetsuit purchase milestone: by 2027-03-01.
+- Athlete already fuels long runs and already owns clip-on aerobars — no action.
 
 ## Recent Plan Review (2026-07-02)
 
@@ -65,6 +81,7 @@ Full macro review completed — see ADR 0002 (loading rhythm + phase rebalance) 
 - [ ] Volleyball final session ~2026-07-29 (W31 Wed) → update `schedule/weekly-template.md`; Wed evening becomes 3rd swim slot from W32
 - [ ] After swim course (ends 2026-07-17): first independent swims W30 (Tue+Fri); 3rd swim added W32
 - [ ] Schedule a run threshold field test (~Aug) and swim CSS test (~late Aug) per macro testing cadence
+- [ ] **Buy indoor smart trainer by 2026-10-31** (ADR 0004) — Build 2 winter block depends on it
 
 ## Detailed Plans Generated
 

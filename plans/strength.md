@@ -13,13 +13,19 @@ session conflict, the endurance session wins.
 ## The sequencing fix (why Mon/Wed are split this way)
 
 Key quality endurance sessions land on **Tue (run)**, **Thu (bike)**, and the **Sat/Sun**
-long block. Heavy legs the day before any of those degrades them. Given the two gym days
-are pinned to **Mon** and **Wed**, the split is:
+long block. Heavy legs the day before any of those degrades them.
+
+**Revised 2026-07-07.** The original split (Mon = lower at 06:30) failed in practice:
+Sunday is the long run and a structurally late night, so Monday 06:30 was skipped almost
+every week — the primary strength day had ~0% compliance. New split:
 
 | Day | Focus | Why |
 |-----|-------|-----|
-| **Mon** | **Lower body + posterior chain** (the primary strength day) | Precedes Tue's run, which is now *tempo* (not max VO2), so mild residual fatigue is tolerable. Heavy/low-rep work causes far less next-day soreness than high-rep hypertrophy. |
-| **Wed** | **Upper body + core + hip/ankle stability/mobility** (low leg load) | Keeps legs fresh for Thu's quality bike. |
+| **Wed 06:30** | **Lower body + posterior chain** (the primary strength day) | Thursday's ride is midday → ~30h recovery, more than the old Mon→Tue gap ever gave. Evening swim on lifted legs is fine. Sits 3 days before Saturday's long ride — comfortable. |
+| **Mon, flexible time** | **Upper body + core + hip/ankle stability/mobility** (low leg load) | 06:30 if Sunday's night allowed it, after work if not. Doesn't load legs, so timing barely matters and the skip-cost is low. |
+
+(While Wednesday volleyball still runs, i.e. until ~2026-07-29, Wednesday lower stays at
+**adaptation loads only** — no heavy lifting hours before explosive jumping.)
 
 On **deload weeks**, gym drops to **1× light** (or skip the second session) — the whole
 week deloads, strength included.
@@ -43,10 +49,19 @@ week deloads, strength included.
 
 ### Base (now → ~2026-09) — Anatomical Adaptation → Max Strength
 Build tissue tolerance and clean technique, then start getting genuinely strong.
-- **Weeks 1–4**: adaptation — 2–3 × 12–15, moderate load, full-body both days. Nail form.
-- **Weeks 5+**: strength — main lifts **4 × 5–6** heavy, accessories 2–3 × 8–12.
+
+**Reset 2026-07-07.** The original weeks 1–4 adaptation block largely didn't happen
+(hand injury + Monday-slot skips: 3 gym sessions in 4 weeks, none lower-body). Hand is
+now fully healed. The clock restarts from actual training state, not the calendar:
+- **W28–W31**: adaptation — 2–3 × 10–12, moderate load. Rebuild the habit and the
+  tissue tolerance. No heavy lifting before Wednesday volleyball (ends ~Jul 29).
+- **W32**: deload (gym 1× light, as below).
+- **W33+**: strength — main lifts **4 × 5–6** heavy, accessories 2–3 × 8–12.
+  Volleyball is gone and the deload is absorbed — clean runway for the heavy block.
 - Progress load when all reps are clean. This is the window to lift heaviest — endurance
   intensity is still low, so recovery budget exists.
+- **Log every gym session to Strava** — the planner reads Strava as ground truth; an
+  unlogged session is a missed session as far as plan adjustment is concerned.
 
 ### Build (~2026-10 → 2027-02) — Max Strength + Power
 Maintain strength on less volume; introduce explosive work.
@@ -68,7 +83,7 @@ Protect the legs for bricks and race-pace work.
 
 ## Sample sessions
 
-**Monday (Base, strength block) — Lower ~50–60 min**
+**Wednesday (Base, strength block) — Lower ~50–60 min**
 1. Warm-up: hips/ankles mobility, bodyweight squats, glute activation (8 min)
 2. Back/Goblet squat — 4 × 5
 3. Romanian deadlift — 3 × 6
@@ -76,7 +91,7 @@ Protect the legs for bricks and race-pace work.
 5. Standing calf raise — 3 × 12
 6. Pallof press — 3 × 10 / side
 
-**Wednesday (Base) — Upper + Core ~45–55 min**
+**Monday (Base, flexible time) — Upper + Core ~45–55 min**
 1. Warm-up: band shoulder work, T-spine mobility (6 min)
 2. DB bench or push-up progression — 3 × 8–10
 3. Row (barbell/DB) — 4 × 8
@@ -84,7 +99,7 @@ Protect the legs for bricks and race-pace work.
 5. Pull-ups / lat pulldown — 3 × max-2
 6. Core circuit ×3: plank 45s · dead bug 10/side · side plank 30s/side
 
-**Monday (Peak) — Full-body maintenance ~35 min**
+**Wednesday (Peak) — Full-body maintenance ~35 min**
 1. Squat — 2 × 4 (heavy-ish, leave reps in reserve)
 2. Box jumps — 3 × 3
 3. Single-leg RDL — 2 × 6 / leg

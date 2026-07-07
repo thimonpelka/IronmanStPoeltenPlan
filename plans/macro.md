@@ -12,7 +12,9 @@
 
 **FTP**: **238W** (3.45 W/kg @ 69kg) — tested 2026-07-03 (20-min power 251W × 0.95). Confirms
 the strong-cyclist assessment; the 133W Strava estimate was invalid. Retest ~2026-08-28.
-**Run pace zones**: Based on estimated 5k of 19:55
+**Run pace zones**: interim, based on an *estimated* 5k (Strava currently ~21:03,
+heat-affected; earlier estimate 19:55). Treat pace bands as approximate — HR/RPE wins on
+conflict — until the run threshold field test (~Aug 2026) anchors real zones.
 
 ---
 
@@ -43,10 +45,12 @@ constraints are the swim (built from zero) and run durability off the bike, not 
 zones are power-based, prescribe the mid-week ride in watts: sweet-spot (Z3–low-Z4, ~190–225W)
 in Build, race-pace/threshold in Peak.
 
-**Bike is the biggest time lever and the athlete only gets 2 rides/week** (CLAUDE.md
-constraint). Both must earn their place: the Saturday ride carries volume + climbing, and
-the mid-week ride carries the intensity (sweet-spot in Build → race-pace/threshold in
-Peak), grown in duration on Thursday's open day. Retest FTP ~2026-08-28 on fresh legs (the
+**Bike is the biggest time lever; the default week carries 2 rides** (a soft default,
+not a cap — clarified 2026-07-07). Both must earn their place: the Saturday ride carries
+volume + climbing, and the mid-week ride carries the intensity (sweet-spot in Build →
+race-pace/threshold in Peak), grown in duration on Thursday's open day. A 3rd ride
+(short recovery spin or extra trainer quality, once the trainer exists — ADR 0004) may
+be added when volume targets and recovery allow. Retest FTP ~2026-08-28 on fresh legs (the
 test-day legs were slightly fatigued, so 238W may be a mild under-read).
 
 ---
@@ -61,14 +65,20 @@ test-day legs were slightly fatigued, so 238W may be a mild under-read).
 | Open water swim (first) | ~2026-08 | Pending |
 | OW skills block 1 (sighting, exits, chop) | 2026-08 → 2026-10 | Planned |
 | Swim CSS test (pacing anchor) | ~2026-08 (late) | Planned |
+| **Race wetsuit bought** | **by 2027-03-01** | Planned (decided 2026-07-07) — winter-sale window; fit issues resolved before the April OW block |
 | OW block 2 — in race wetsuit + mass-start sim | 2027-04 → race | Planned |
 | First Brick session | ~2026-08 | Pending |
 | Bricks regular (Sat ride + transition run) | Build (from ~2026-10) | Planned |
+| **Indoor smart trainer bought + set up** | **by 2026-10-31** | Planned (ADR 0004) — Build 2 depends on it |
 | Half-distance race simulation | ~2027-03/04 (Peak, ~7wk out) | Planned |
 | Last long ride (>90km) | ~2027-04-26 | Planned |
 | Last long run (>18km) | ~2027-04-25 | Planned |
 | Taper begins | 2027-05-03 | Planned |
 | **Race day** | **2027-05-23** | Target |
+
+_Tune-up race: deliberately **not** planned (decided 2026-07-07). If one happens
+spontaneously, treat it as a C-race and adjust that week's plan; mass-start rehearsal
+stays covered by the OW block 2 simulations._
 
 ---
 
@@ -176,6 +186,10 @@ Split into two sub-blocks with a deload between them:
   Grow the mid-week bike; longer sustained tempo blocks over short intervals.
 - **Build 2** (~2026-11-30 → 2027-02-28): threshold emphasis and brick progression.
   Bricks move from occasional to (near-)weekly by the end of the block.
+  **Winter riding (ADR 0004)**: the mid-week quality ride moves to the indoor trainer
+  by default from ~December (prescribed in watts); Saturday rides go outdoors when
+  conditions allow, with a trainer fallback named in each weekly plan. Weekday trainer
+  rides sit after work; Mon/Wed/Tue mornings keep gym/gym/run.
 
 Weekly session targets:
 - Run: 2x (1 long, 1 tempo or intervals)
@@ -257,11 +271,20 @@ Zones must come from a **tested threshold**, not estimates or age formulas:
 ## Load Management — Heat & Volleyball
 
 - **Heat**: a long run was already cut short by heat (W26); training runs through a Vienna
-  summer. Schedule long sessions **early AM**, carry fluids + electrolytes (~500–750 ml/h,
+  summer. **Concrete rule (2026-07-07)**: through ~end of August, weekend long sessions
+  start **rolling by 07:00–07:30** — weekly plans state the start time explicitly (the
+  10:00+ starts of early July are what the W26 truncation looks like). Carry fluids +
+  electrolytes (~500–750 ml/h,
   add sodium on long efforts), and judge easy sessions by HR/RPE not pace when it's hot.
   Note: **the race is in May (likely cool)**, so summer heat is a *training-quality
   constraint to manage*, not a race adaptation to chase — don't sabotage key sessions
   proving a point in 35°C.
+- **Volleyball note (2026-07-07)**: June 2026 (W25–W26) carried an outlier spike of
+  ~10–14.5h/week of beach volleyball (3–5 sessions) — far above the planned ~2h. This
+  explains much of the W25–W26 fatigue/missed sessions and is not expected to repeat:
+  expect ≤1×/week until the course ends (~Jul 29), near-zero after. **Rule**: if a week
+  ever exceeds ~2 volleyball sessions or ~4h again, that week's plan yields elsewhere
+  (trim the mid-week ride or a swim) rather than stacking.
 - **Volleyball** is real load (already treated as such) **and a real injury risk** —
   explosive lateral/jumping load on ankles and knees that could derail run/bike training.
   Treat a tweak as a red flag, not something to train through. Wednesday sessions end

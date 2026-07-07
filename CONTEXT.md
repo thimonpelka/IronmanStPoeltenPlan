@@ -37,13 +37,22 @@ A single training block combining bike immediately followed by run, designed to 
 
 ## Pinned Session
 
-A session locked to a specific day of the week in the weekly template. Pinned sessions do not move when the plan is adjusted. Examples: Gym on Monday and Wednesday mornings, long ride on Saturday.
+A session locked to a specific day of the week in the weekly template. Pinned sessions do not move to another day when the plan is adjusted, though their time within the day may be flexible. Examples: lower-body gym on Wednesday morning, upper-body gym on Monday (flexible time), long ride on Saturday.
 
 ---
 
 ## Floating Session
 
 A session that has a prescribed role in the week (e.g. second run, interval bike) but whose exact day is determined by me based on available slots, recovery, and other anchors that week.
+
+---
+
+## Soft Default
+
+A typical-week value the planner starts from but may vary — e.g. weekly session counts
+(3 swim / 2 bike / 2 run). Distinct from a **constraint**, which is never violated (e.g.
+no outdoor bike before work on weekdays). Clarified 2026-07-07: session counts are soft
+defaults; the binding limits are the phase volume targets in the macro plan plus recovery.
 
 ---
 

@@ -62,12 +62,12 @@ Use Strava as the source of truth for what was actually completed. Planned sessi
 
 ## Key Constraints (never violate)
 
-- No bike sessions before work on weekdays (no indoor trainer).
-- Monday and Wednesday mornings are gym sessions at ~06:30.
+- No **outdoor** bike sessions before work on weekdays. Indoor trainer arrives ~end of Oct 2026 (see docs/adr/0004); from then, trainer rides may be scheduled on weekdays — preferably **after work** (Mon/Wed mornings stay gym, Tue morning stays run).
+- Gym 2×/week: **Wed 06:30 = lower body (primary strength day, pinned)**; **Mon = upper + core at a flexible time** (06:30 or after work — Monday mornings post-long-run are unreliable; changed 2026-07-07, see plans/strength.md).
 - Tuesday morning is a run (≤1h, easy or structured).
 - Saturday = long ride (or brick session).
 - Sunday = long run.
 - Volleyball Wed evening until ~2026-07-29.
 - Beach volleyball 1–2x/week is a real training load — treat it as such when calculating weekly stress.
 - Swim sessions only start after the technique course is completed (~early July 2026, TBD).
-- Maximum: 3 swim, 2 bike, 2 run sessions per week (not counting gym and volleyball). Swim raised from 2→3 on 2026-07-02 — swim is the primary limiter; frequency > duration while the stroke is young (see docs/adr/0003).
+- Typical week: 3 swim, 2 bike, 2 run sessions (not counting gym and volleyball). These are **soft defaults, not hard caps** (clarified 2026-07-07) — the planner may vary them when weekly volume targets (`plans/macro.md`) and recovery allow. Swim ≥3 short sessions stays the deliberate target while the stroke is young — frequency > duration (see docs/adr/0003).
