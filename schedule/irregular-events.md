@@ -14,8 +14,8 @@ Add entries here directly, or tell me in chat and I will update this file.
 
 ## Upcoming Events
 
-- 2026-09-01: **FTP retest** (20-min) planned in the W36 deload, on fresh legs (W36 = Aug 31–Sep 6). Re-anchors power zones for the final base block.
-- 2026-09-01: **Run threshold field test** (W36, Tue Sep 1) — 5k TT or 20–30min TT to replace the estimated 5k with a tested threshold pace.
+- 2026-09-05: **FTP retest** (20-min) in the W36 deload, on fresh legs. Re-anchors power zones for the final base block.
+- Run threshold test — **optional/opportunistic** (downgraded 2026-08-04). Run zones now anchored to the real Silvesterlauf 5k (2025-12-31: HRmax 192, threshold ~178). Any hard parkrun/30-min effort retro-anchors the current threshold-HR line; no scheduled test.
 
 ## Past Events
 

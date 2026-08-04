@@ -16,7 +16,7 @@ _Last updated: 2026-08-04_
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Estimated 5k | ~20:47 | Strava prediction (down from 21:03; still an estimate — **tested run threshold due W36, Sep 1**) |
+| 5k | **20:40** (real, Silvesterlauf 2025-12-31) — Strava now predicts ~20:47, i.e. holding | Race + Strava. HRmax 192, threshold HR ~178 measured that day |
 | **FTP** | **238W** (3.45 W/kg @ 69kg) | Tested 2026-07-03. **Retest W36, Sep 5** (fresh legs → may read higher) |
 | Swim | **Progressing fast** — 4×250m continuous (Aug 3); first OWS 594m (Jul 27) | Strava. From zero on Jul 11 |
 | Long run (recent) | 20km @ Z2, ~5:36–5:55/km, weekly (Jul 12, 26, Aug 2) | Strava — very consistent |
@@ -33,11 +33,24 @@ _Last updated: 2026-08-04_
 Sweet-spot (88–94%) = **209–224W**. **Race bike target: NP ~178–186W (IF ~0.75–0.78),
 surges to ~215–225W on climbs only.** Zones refresh after the W36 FTP retest.
 
-### Run Zones (Strava, MaxHR-based HR + estimated-5k pace — provisional)
+### Run Zones (anchored to real data — Silvesterlauf 5k, 2025-12-31)
 
-Z1 ≤124 · **Z2 125–154** · Z3 155–169 · Z4 170–184 · Z5 185+ bpm.
-Pace bands are from an *estimated* 5k and stay provisional until the **W36 run field test**;
-HR/RPE wins on conflict.
+Re-derived 2026-08-04 from a real maximal effort: **HRmax ≈ 192, threshold HR ≈ 178**
+(5k race avg HR 180, max 192, ~4:08/km). This replaces the max-formula bands.
+
+| Zone | HR (bpm) | Pace (/km) |
+|------|----------|-----------|
+| Z1 Recovery | <135 | >5:45 |
+| Z2 Endurance | 135–155 | 5:00–5:45 |
+| Z3 Tempo | 156–168 | 4:35–5:00 |
+| Z4 Threshold | 169–178 | 4:15–4:35 |
+| Z5 VO2 / 5k | 179+ | <4:15 |
+
+These are well-anchored: the summer Z3 tempo runs (160–166 bpm) were prescribed submaximal
+and correctly sit *below* threshold — consistent with LTHR ~178, confirming threshold is
+above ~166. No contradiction, no test needed. The only residual uncertainty is slow drift
+since December (fitness has climbed), so recheck opportunistically — a hard parkrun/30-min
+effort anytime updates the threshold line. HR/RPE wins on conflict.
 
 ---
 
@@ -68,8 +81,8 @@ swim progressing faster than expected, one consistent gap (mid-week quality bike
 
 ## Next Actions
 
-- [ ] **W36 run threshold field test (Tue Sep 1)** — 5k or 30min TT → re-anchor run zones
-- [ ] **W36 FTP retest (Sat Sep 5)** — 20-min test on fresh legs → reset power zones
+- [ ] **W36 FTP retest (Sat Sep 5)** — 20-min test on fresh legs → reset power zones (still worth it: the 238W was on tired legs)
+- [~] Run threshold test — **downgraded to optional** (2026-08-04). Run zones now anchored to the real Dec 31 5k (HRmax 192 / threshold ~178). A hard parkrun or 30-min effort anytime would confirm the current threshold-HR line; no scheduled test needed
 - [ ] **Protect the Thursday sweet-spot ride** in W33–35 (the recurring adherence gap)
 - [ ] Schedule the first **swim CSS test** (400m + 200m TT) — overdue per macro cadence;
   slot ~late Aug/early Sep once continuous 400m is comfortable
@@ -99,6 +112,6 @@ _Next to write (~W37 onward): after the W36 tests re-anchor zones — final base
 | Swim → 3×/week | ✅ Begins W32 (Wed slot, post-volleyball) |
 | First brick session | ✅ Done 2026-08-01 (W31) — 90km + 4km run |
 | First open water swim | ✅ Done 2026-07-27 (W31) — 594m; OW block 1 continues |
-| Run threshold field test | 🔜 W36 (Sep 1) |
+| Run threshold field test | Optional — zones anchored to real Dec 31 5k (HRmax 192). Confirm opportunistically via parkrun/hard 30min |
 | Swim CSS test | Pending — schedule late Aug/early Sep |
 | Race day | 2027-05-23 |

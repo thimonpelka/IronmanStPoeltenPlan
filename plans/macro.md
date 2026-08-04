@@ -12,9 +12,12 @@
 
 **FTP**: **238W** (3.45 W/kg @ 69kg) — tested 2026-07-03 (20-min power 251W × 0.95). Confirms
 the strong-cyclist assessment; the 133W Strava estimate was invalid. Retest ~2026-08-28.
-**Run pace zones**: interim, based on an *estimated* 5k (Strava currently ~21:03,
-heat-affected; earlier estimate 19:55). Treat pace bands as approximate — HR/RPE wins on
-conflict — until the run threshold field test (~Aug 2026) anchors real zones.
+**Run pace zones**: anchored to a **real** maximal effort — Silvesterlauf 5k, 2025-12-31
+(~20:40, HR avg 180 / max 192 → HRmax ≈ 192, threshold HR ≈ 178). Zones live in `STATUS.md`.
+Summer Z3 tempo runs (160–166 bpm) were prescribed submaximal and correctly sit below
+threshold, consistent with LTHR ~178 — so the zones are solid, not provisional. HR/RPE wins
+on conflict; recheck the threshold line opportunistically (parkrun/30-min effort) only to
+track drift as fitness climbs. A dedicated run field test is **not** required.
 
 ---
 
