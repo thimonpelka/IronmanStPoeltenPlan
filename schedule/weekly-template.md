@@ -24,7 +24,7 @@
 - **Work**: ~08:00–12:30 (flexible start)
 - **06:30** — Gym — Lower body, primary strength day (Pinned, ~60min)
 - Afternoon (from ~13:00): free
-- **~17:00–19:00** — Beach Volleyball (Pinned until 2026-07-29, see note below)
+- **Evening** — Swim #3 (3rd weekly swim slot, since 2026-07-30 — replaced beach volleyball)
 
 ### Thursday
 - No fixed commitments
@@ -52,7 +52,7 @@
 | Mon | Gym (upper + core) | Strength — flexible time (AM or after work) |
 | Tue | Run | Easy or structured (≤1h morning) |
 | Wed | Gym (lower body) | Strength — 06:30, primary strength day |
-| Wed evening | Beach Volleyball | Until 2026-07-29 only |
+| Wed evening | Swim #3 | 3rd weekly swim (since 2026-07-30, replaced volleyball) |
 | Sat | Long Ride (or Brick) | Endurance |
 | Sun | Long Run | Endurance |
 
@@ -60,6 +60,10 @@ Floating sessions (second run, second bike, swim) are scheduled by me on Thu/Fri
 
 ---
 
-## Note: Wednesday Volleyball
+## Note: Wednesday Volleyball → Swim (transition complete)
 
-Beach volleyball training on Wednesday evenings (~17:00–19:00) is a fixed commitment **until approximately 2026-07-29** (final session in W31). After that date, Wednesday evenings are free and become the **3rd weekly swim slot** (swim cap raised 2→3×/week, 2026-07-02 — see docs/adr/0003). This transition takes effect from **W32 (2026-08-05)**. Update this file after the last volleyball session, or tell me in chat when it changes.
+Beach volleyball on Wednesday evenings ended in W31. **Actual final session: 2026-07-30**
+(one more than planned — Jul 29 evening + Jul 30 morning). From **W32 (2026-08-05)** the
+Wednesday evening slot is the **3rd weekly swim** (swim cap raised 2→3×/week, 2026-07-02 —
+see docs/adr/0003). Volleyball is now near-zero load; if it ever recurs at >2 sessions or
+>4h in a week, that week's plan yields elsewhere (macro *Load Management*).
