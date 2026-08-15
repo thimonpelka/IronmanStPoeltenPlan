@@ -106,9 +106,21 @@ The run is the athlete's **strength** (sub-20 5k, half in Z2), so it needs the l
 work to be race-ready — but 70.3 run performance is about **aerobic durability and
 running off the bike**, not 5k speed. Bias the training accordingly:
 
-- **Quality run** = tempo / threshold continuous blocks + **progression long runs**,
-  not high volumes of 400m VO2 reps. Keep short speed only as **strides** (6–8×20s) for
-  economy. The current 8–12×400m @ Z4 sessions build a quality the athlete already has.
+ **Intensity distribution — pyramidal, all phases (not just base).** Mostly easy volume,
+  a meaningful block of tempo/threshold, a small top-end tip — not strict polarized, and
+  not grey-zone-heavy. The enemy is **accidental Z3** (easy runs drifting up), *not*
+  purposeful quality; cap easy runs by HR (Z2), not pace. This holds *more* in Build/Peak
+  as the ~20% quality grows, not less. By total weekly volume the plan already runs closer
+  to ~90/10 (large aerobic bike + easy long run + technique swims) — that's intended.
+- **Quality run** = tempo / threshold continuous blocks + **progression long runs**, plus
+  a *small* VO2 dose in Build (see next bullet)
+- **VO2 — minimal in Base, programmed in Build** In Build it earns a
+  place mainly because it drives **FTP gains on the bike** (higher FTP → higher absolute
+  race watts at the same IF → the biggest sub-5:30 lever). Dose it **every other week**,
+  concentrated in Build 1 / early Build 2 and **fading toward race-specific threshold/tempo**
+  by late Build and Peak (a 70.3 is raced at tempo, not VO2 — specificity rises as the race
+  nears). Keep run VO2 as light *maintenance* (the run ceiling is already high; the run
+  limiter is durability off the bike, not top-end).
 - **Long run** stays the aerobic anchor; add late-run progression (finish faster) as it
   builds — this trains fatigue resistance, the actual race limiter.
 - **Bricks are a race-specific skill and start earlier**: introduce in Base (first ~Aug),
@@ -186,7 +198,8 @@ bike and run. Make bricks a regular fixture.
 
 Split into two sub-blocks with a deload between them:
 - **Build 1** (~2026-09-28 → 2026-11-29): strength-endurance and sweet-spot bias.
-  Grow the mid-week bike; longer sustained tempo blocks over short intervals.
+  Grow the mid-week bike; longer sustained tempo blocks over short intervals, plus an
+  **every-other-week VO2 stimulus** to lift the ceiling early in the block.
 - **Build 2** (~2026-11-30 → 2027-02-28): threshold emphasis and brick progression.
   Bricks move from occasional to (near-)weekly by the end of the block.
   **Winter riding (ADR 0004)**: the mid-week quality ride moves to the indoor trainer
@@ -195,11 +208,17 @@ Split into two sub-blocks with a deload between them:
   rides sit after work; Mon/Wed/Tue mornings keep gym/gym/run.
 
 Weekly session targets:
-- Run: 2x (1 long, 1 tempo or intervals)
-- Bike: 2x (1 long Saturday; 1 mid-week **sweet-spot/threshold**, grown to ~1.5–2h on
-  Thursday). The bike is where a sub-5:30 is won on a hilly course — with only 2 rides
-  allowed, both must be high-value: long + hilly, and quality mid-week. Avoid junk-mile
-  flat rolls.
+ Run: 2x (1 long with late-run progression; 1 quality — tempo/threshold continuous,
+  **with a VO2 session every other week** in Build 1 / early Build 2: e.g. 4–5 × 3min hard
+  (Z5, <4:15/km) or hill reps, full recovery — a maintenance dose, *not* high-volume 400m
+  work. Quality shifts toward threshold / race-pace by late Build.)
+- Bike: 2x (1 long Saturday; 1 mid-week quality — **sweet-spot/threshold**, grown to
+  ~1.5–2h on Thursday, **with a bike VO2 session every other week** in Build 1 / early
+  Build 2: e.g. 5 × 3min or 4 × 4min @ ~106–120% FTP (~250–285W), equal recovery — this
+  feeds FTP and is the highest-yield VO2 for sub-5:30; transition to threshold / race-pace
+  watts by late Build). The bike is where a sub-5:30 is won on a hilly course — with only
+  2 rides allowed, both must be high-value: long + hilly, and quality mid-week. Avoid
+  junk-mile flat rolls.
 - Swim: 2–3x (building from technique to endurance; keep frequency high while the stroke is young)
 - Strength: 2x
 - Volleyball: as scheduled (reduced in winter months, adjust accordingly)
@@ -207,7 +226,8 @@ Weekly session targets:
 Weekly volume targets:
 - ~9–11h/week
 
-Key adaptations: lactate threshold improvement, swim endurance, brick adaptation.
+Key adaptations: VO2max / FTP ceiling (early Build), lactate threshold improvement, swim
+endurance, brick adaptation.
 
 ---
 
