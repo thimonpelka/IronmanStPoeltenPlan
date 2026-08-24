@@ -11,7 +11,7 @@
 | Volleyball | Active | 1–2x/week, serious commitment |
 
 **FTP**: **238W** (3.45 W/kg @ 69kg) — tested 2026-07-03 (20-min power 251W × 0.95). Confirms
-the strong-cyclist assessment; the 133W Strava estimate was invalid. Retest ~2026-08-28.
+the strong-cyclist assessment; the 133W Strava estimate was invalid. Retest 2026-09-05 (W36 deload — moved from the pencilled Aug 28 for a fresh-legs read).
 **Run pace zones**: anchored to a **real** maximal effort — Silvesterlauf 5k, 2025-12-31
 (~20:40, HR avg 180 / max 192 → HRmax ≈ 192, threshold HR ≈ 178). Zones live in `STATUS.md`.
 Summer Z3 tempo runs (160–166 bpm) were prescribed submaximal and correctly sit below
@@ -53,7 +53,7 @@ not a cap — clarified 2026-07-07). Both must earn their place: the Saturday ri
 volume + climbing, and the mid-week ride carries the intensity (sweet-spot in Build →
 race-pace/threshold in Peak), grown in duration on Thursday's open day. A 3rd ride
 (short recovery spin or extra trainer quality, once the trainer exists — ADR 0004) may
-be added when volume targets and recovery allow. Retest FTP ~2026-08-28 on fresh legs (the
+be added when volume targets and recovery allow. Retest FTP 2026-09-05 (W36 deload) on fresh legs (the
 test-day legs were slightly fatigued, so 238W may be a mild under-read).
 
 ---
@@ -62,7 +62,7 @@ test-day legs were slightly fatigued, so 238W may be a mild under-read).
 
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
-| FTP Test (bike) | 2026-07-03 | ✅ Done — 238W (3.45 W/kg). Next ~2026-08-28 |
+| FTP Test (bike) | 2026-07-03 | ✅ Done — 238W (3.45 W/kg). Next 2026-09-05 (W36) |
 | Swim technique course | 2026-07-11, 13, 14, 16, 17 | Confirmed |
 | First structured swim sessions | 2026-07-20 (W30) | Tue afternoon + Friday, 2x/week |
 | Open water swim (first) | ~2026-08 | Pending |
@@ -72,7 +72,7 @@ test-day legs were slightly fatigued, so 238W may be a mild under-read).
 | OW block 2 — in race wetsuit + mass-start sim | 2027-04 → race | Planned |
 | First Brick session | ~2026-08 | Pending |
 | Bricks regular (Sat ride + transition run) | Build (from ~2026-10) | Planned |
-| **Indoor smart trainer bought + set up** | **by 2026-10-31** | Planned (ADR 0004) — Build 2 depends on it |
+| **Indoor smart trainer** | arrived ~2026-08 (target: buy by 2026-10-31) | ✅ Acquired early — setup pending, target online ~mid-Sep–Oct (ADR 0004); Build 2 depends on it |
 | Half-distance race simulation | ~2027-03/04 (Peak, ~7wk out) | Planned |
 | Last long ride (>90km) | ~2027-04-26 | Planned |
 | Last long run (>18km) | ~2027-04-25 | Planned |
@@ -144,8 +144,9 @@ must not compromise key sessions:
 - **Peak**: maintenance/power only, reduced volume — protect the legs for bike/run/brick
   quality. Drop to **1× in the final 4 weeks**.
 - **Sequencing**: heavy lower-body should not sit the day before a key run/bike quality
-  session. Note the current **Mon gym → Tue run-intervals** clash — either keep Monday
-  upper-body/technique-biased or move the run quality off Tuesday.
+  session. Resolved (2026-07-07 / 2026-08-24): lower-body is now **Wed** (Thursday's ride is
+  ~30h later), upper-body **Thu** after that ride — so Tuesday's quality run sits clear of
+  heavy legs. The old Mon-gym → Tue-run clash no longer exists.
 
 ---
 
@@ -170,16 +171,18 @@ Swimming is built from zero; it is the highest-risk leg. It gets priority in Bas
 
 ## Phases
 
-### Phase 1 — Base (2026-W26 → 2026-W39)
-**Dates**: 2026-06-22 → 2026-09-27 (~14 weeks)
+### Phase 1 — Base (2026-W25 → 2026-W39)
+**Dates**: 2026-06-15 → 2026-09-27 (~15 weeks)
 **Focus**: Aerobic foundation across all disciplines. Establish swim from scratch after technique course. Maintain and modestly grow bike and run volume. Consistency over intensity.
 
-Weekly session targets:
+Weekly session targets _(soft defaults — from W37 the weekly template runs 3 bike / 3 run;
+the added Tue ride + Fri run are deliberately **easy** aerobic volume, see
+`schedule/weekly-template.md`. The 2× below are the quality-session floor)_:
 - Run: 2x (1 easy long + late-run progression; 1 quality ≤1h — tempo/threshold + strides, not high-volume 400m VO2 work)
 - Bike: 2x (1 long Saturday with real elevation, 1 mid-week — grow from moderate toward
   ~90min endurance by end of Base; Thursday's open day allows length the weekday slots can't)
 - Swim: 0x until course complete → then **2–3x** (swim is the priority — frequency > duration; see ADR 0003). Recommend a 3rd short swim in the Wed evening slot freed after volleyball ends (~2026-07-29).
-- Strength: 2x (Mon/Wed gym)
+- Strength: 2x (Wed lower / Thu upper — see `plans/strength.md`)
 - Volleyball: 1–2x (as scheduled)
 
 Weekly volume targets (run + bike combined moving time):
@@ -267,8 +270,8 @@ Deload weeks are good test slots (fresh legs, low surrounding load).
 
 | Test | First | Cadence |
 |------|-------|---------|
-| Bike FTP (20-min) | 2026-07-03 ✅ (238W) | every ~8 weeks (≈2026-08-28, 10-23, 12-18; 2027-02-12, 04-09) |
-| Run threshold (field test / recent race) | ~2026-08 | every ~8 weeks |
+| Bike FTP (20-min) | 2026-07-03 ✅ (238W) | every ~8 weeks (≈2026-09-05, 10-31, 12-26; 2027-02-20, 04-17) |
+| Run threshold (real race / optional field test) | 2025-12-31 5k (anchored) | opportunistic — recheck for drift |
 | Swim CSS (400m + 200m TT) | ~2026-08 (late) | every ~6–8 weeks |
 
 After each test: update zones in `STATUS.md` and re-derive the affected prescriptions.
@@ -281,13 +284,13 @@ Zones must come from a **tested threshold**, not estimates or age formulas:
 
 - **Bike**: % of tested FTP (Coggan-style). **FTP = 238W (tested 2026-07-03)** — zones live
   in `STATUS.md`. Prescribe rides in watts from W28 onward.
-- **Run**: pace + HR anchored to a tested threshold pace (from the run field test), not
-  from an estimated 5k.
+- **Run**: pace + HR anchored to a **real maximal effort** — the Silvesterlauf 5k
+  (2025-12-31: HRmax ≈ 192, threshold HR ≈ 178), not an estimated 5k. Zones live in
+  `STATUS.md`; Z2 is tightened to **135–155 bpm** with the HRmax/LTHR basis stated there.
+  A dedicated field test is optional — recheck the threshold line opportunistically
+  (parkrun / 30-min effort) to track drift as fitness climbs.
 - **Swim**: pace zones from CSS.
-- The current "Z2 = 125–154 bpm" is a **30-bpm band** — too wide to be useful; it spans
-  easy to genuinely moderate. Tighten Z2 once threshold HR is known, and state the max-HR
-  / threshold-HR basis in `STATUS.md` (currently unstated). Keep one consistent zone
-  system across the plan rather than mixing definitions.
+- Keep one consistent zone system across the plan rather than mixing definitions.
 
 ---
 

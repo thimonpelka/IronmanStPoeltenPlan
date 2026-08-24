@@ -34,6 +34,9 @@ plans/
 docs/adr/               ← architecture decision records (why the plan is shaped this way)
 scripts/
   sync_calendar.py      ← push weekly plans to Google Calendar
+pyproject.toml          ← Python deps for the calendar-sync script (uv)
+uv.lock                 ← locked dependency versions
+.python-version         ← pinned Python for uv
 ```
 
 ## Working with Claude each session

@@ -37,7 +37,7 @@ A single training block combining bike immediately followed by run, designed to 
 
 ## Pinned Session
 
-A session locked to a specific day of the week in the weekly template. Pinned sessions do not move to another day when the plan is adjusted, though their time within the day may be flexible. Examples: lower-body gym on Wednesday morning, upper-body gym on Monday (flexible time), long ride on Saturday.
+A session locked to a specific day of the week in the weekly template. Pinned sessions do not move to another day when the plan is adjusted, though their time within the day may be flexible. Examples: lower-body gym on Wednesday morning, upper-body gym on Thursday afternoon, long ride on Saturday.
 
 ---
 
@@ -50,7 +50,7 @@ A session that has a prescribed role in the week (e.g. second run, interval bike
 ## Soft Default
 
 A typical-week value the planner starts from but may vary — e.g. weekly session counts
-(3 swim / 2 bike / 2 run). Distinct from a **constraint**, which is never violated (e.g.
+(e.g. 3 swim / 3 bike / 3 run, the current template). Distinct from a **constraint**, which is never violated (e.g.
 no outdoor bike before work on weekdays). Clarified 2026-07-07: session counts are soft
 defaults; the binding limits are the phase volume targets in the macro plan plus recovery.
 
@@ -98,7 +98,7 @@ A named event or achievement that gates phase transitions. Examples:
 
 ## Weekly Plan
 
-A detailed file for a specific ISO calendar week (e.g. `plans/weeks/2026-W26.md`). Contains the day-by-day session schedule for that week, prescribed zones/targets, and notes. Only 3–4 weeks of detailed plans exist at any time — new weeks are generated when I'm restarted in a new session.
+A detailed file for a specific ISO calendar week (e.g. `plans/weeks/2026-W26.md`). Contains the day-by-day session schedule for that week, prescribed zones/targets, and notes. Only the next ~3–4 weeks are actively written ahead; completed week files are **kept as a training log** (an archive of what was prescribed), so the folder accumulates roughly one file per week over time.
 
 ---
 

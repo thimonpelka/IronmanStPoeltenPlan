@@ -62,7 +62,7 @@ Use Strava as the source of truth for what was actually completed. Planned sessi
 
 ## Key Constraints (never violate)
 
-- No **outdoor** bike sessions before work on weekdays. Indoor trainer arrives ~end of Oct 2026 (see docs/adr/0004); from then, trainer rides may be scheduled on weekdays — preferably **after work** (Mon/Wed mornings stay gym, Tue morning stays run).
+- No **outdoor** bike sessions before work on weekdays. Indoor trainer **arrived ~Aug 2026, setup pending** (expected online ~mid-Sep–Oct 2026; see docs/adr/0004); once online, trainer rides may be scheduled on weekdays — preferably **after work** (Mon/Wed mornings stay gym, Tue morning stays run).
 - Gym 2×/week: **Wed 06:30 = lower body (primary strength day, pinned)**; **upper + core = Thu afternoon, after the quality bike** (low leg load, so it doesn't touch the ride; moved from Mon on 2026-08-24 effective W37 — Monday post-long-run mornings were unreliable; see plans/strength.md).
 - Tuesday morning is a run (≤1h, easy or structured — the quality run). Tuesday afternoon carries an easy ~1h aerobic ride (the 3rd weekly bike, added 2026-08-24 eff. W37).
 - Friday carries a 3rd, easy/short run (≤45min), **skipped in brick weeks** to stay at max 3 runs/week (added 2026-08-24 eff. W37).

@@ -53,7 +53,7 @@ week deloads, strength included.
 
 ## Periodization
 
-### Base (now → ~2026-09) — Anatomical Adaptation → Max Strength
+### Base (~2026-06 → ~2026-09) — Anatomical Adaptation → Max Strength
 Build tissue tolerance and clean technique, then start getting genuinely strong.
 
 **Reset 2026-07-07.** The original weeks 1–4 adaptation block largely didn't happen
@@ -97,7 +97,7 @@ Protect the legs for bricks and race-pace work.
 5. Standing calf raise — 3 × 12
 6. Pallof press — 3 × 10 / side
 
-**Monday (Base, flexible time) — Upper + Core ~45–55 min**
+**Thursday (Base, after the quality bike) — Upper + Core ~45–55 min**
 1. Warm-up: band shoulder work, T-spine mobility (6 min)
 2. DB bench or push-up progression — 3 × 8–10
 3. Row (barbell/DB) — 4 × 8

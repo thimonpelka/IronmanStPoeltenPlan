@@ -7,7 +7,7 @@ _Last updated: 2026-08-24_
 | Field | Value |
 |-------|-------|
 | Phase | Base (Phase 1) |
-| Phase week | 11 of 14 (W35) |
+| Phase week | 11 of 15 (W35) |
 | Plan week | 2026-W35 (Aug 24–30) — peak of the W33–35 load triple; 2nd brick |
 | Loading cycle | 3:1 in Base/Build. **W33–35 = loading triple (current) → W36 deload + tests.** Then **W37–38 load → W39 camp (absorbs deload) → W40 Build-1 re-entry** |
 | Weeks to race | ~39 |
@@ -107,7 +107,7 @@ Pulled Strava Jul 27–Aug 23. **Adherence excellent; W28→W32 gaps closed.**
 - [ ] **Prioritize open-water swims on W37/W38 Fridays** — OW block behind (Aug OWS became pool swims); season closes ~Oct and the camp costs a week
 - [ ] Schedule the first **swim CSS test** (400m + 200m TT) — overdue per macro cadence;
   continuous 500m is now comfortable, so slot it ~W37 (a good re-entry benchmark)
-- [ ] **Buy indoor smart trainer by 2026-10-31** (ADR 0004) — Build 2 winter block depends on it
+- [~] **Indoor smart trainer arrived ~Aug 2026** (ahead of the Oct 31 deadline) — now **set it up + do shakedown rides before Build 2** (ADR 0004); target online ~mid-Sep–Oct
 - [ ] After W36 tests: update this file's zones, re-derive sweet-spot/tempo bands + run pace
 
 ## Detailed Plans Generated

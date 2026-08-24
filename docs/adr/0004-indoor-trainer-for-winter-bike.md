@@ -48,4 +48,11 @@ Alternatives considered:
 - Weekly plans from ~December prescribe the mid-week ride as a trainer session in
   watts; long-ride prescriptions name an indoor fallback.
 - FTP tests become executable in winter regardless of weather (relevant for the
-  ~2026-12-18 and 2027-02-12 retests).
+  ~2026-12-26 and 2027-02-20 retests).
+
+## Update — 2026-08-24
+
+The trainer **arrived ahead of schedule (~Aug 2026)**, before the end-of-October deadline;
+setup/shakedown is pending (target online ~mid-Sep–Oct 2026). The decision stands unchanged —
+only the acquisition date moved earlier. `schedule/weekly-template.md`, `CLAUDE.md`,
+`STATUS.md`, and the `plans/macro.md` milestone reflect the arrived-but-not-yet-online state.
