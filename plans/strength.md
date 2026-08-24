@@ -22,10 +22,16 @@ every week — the primary strength day had ~0% compliance. New split:
 | Day | Focus | Why |
 |-----|-------|-----|
 | **Wed 06:30** | **Lower body + posterior chain** (the primary strength day) | Thursday's ride is midday → ~30h recovery, more than the old Mon→Tue gap ever gave. Evening swim on lifted legs is fine. Sits 3 days before Saturday's long ride — comfortable. |
-| **Mon, flexible time** | **Upper body + core + hip/ankle stability/mobility** (low leg load) | 06:30 if Sunday's night allowed it, after work if not. Doesn't load legs, so timing barely matters and the skip-cost is low. |
+| **Thu afternoon** (from 2026-W37) | **Upper body + core + hip/ankle stability/mobility** (low leg load) | Done *after* Thursday's quality bike. Low leg load means it doesn't touch the intervals, and it clears Monday to be a light swim-only day after the Sunday long run. |
 
-(While Wednesday volleyball still runs, i.e. until ~2026-07-29, Wednesday lower stays at
-**adaptation loads only** — no heavy lifting hours before explosive jumping.)
+**Moved 2026-08-24 (effective W37):** upper + core moved **Mon → Thu afternoon** (after the
+quality bike). Previously Monday-flexible; Monday post-long-run mornings were unreliable, and
+consolidating both gym sessions to bike-adjacent midweek days keeps the legs' heavy day (Wed)
+well clear of the weekend. Weeks W33–W36, already written, keep upper on Monday.
+
+(While Wednesday volleyball still ran, i.e. until ~2026-07-29, Wednesday lower stayed at
+**adaptation loads only** — no heavy lifting hours before explosive jumping. Volleyball is
+now over.)
 
 On **deload weeks**, gym drops to **1× light** (or skip the second session) — the whole
 week deloads, strength included.

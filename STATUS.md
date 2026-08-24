@@ -1,16 +1,16 @@
 # Training Status
 
-_Last updated: 2026-08-04_
+_Last updated: 2026-08-24_
 
 ## Current State
 
 | Field | Value |
 |-------|-------|
 | Phase | Base (Phase 1) |
-| Phase week | 8 of 14 (W32) |
-| Plan week | 2026-W32 (Aug 3–9) — **DELOAD** in progress |
-| Loading cycle | 3:1 in Base/Build. **W29–31 = loading triple → W32 deload (current).** Next: **W33–35 = load triple → W36 deload + tests** |
-| Weeks to race | ~42 |
+| Phase week | 11 of 14 (W35) |
+| Plan week | 2026-W35 (Aug 24–30) — peak of the W33–35 load triple; 2nd brick |
+| Loading cycle | 3:1 in Base/Build. **W33–35 = loading triple (current) → W36 deload + tests.** Then **W37–38 load → W39 camp (absorbs deload) → W40 Build-1 re-entry** |
+| Weeks to race | ~39 |
 
 ## Fitness Snapshot (from Strava, reviewed 2026-08-04)
 
@@ -18,9 +18,10 @@ _Last updated: 2026-08-04_
 |--------|-------|--------|
 | 5k | **20:40** (real, Silvesterlauf 2025-12-31) — Strava now predicts ~20:47, i.e. holding | Race + Strava. HRmax 192, threshold HR ~178 measured that day |
 | **FTP** | **238W** (3.45 W/kg @ 69kg) | Tested 2026-07-03. **Retest W36, Sep 5** (fresh legs → may read higher) |
-| Swim | **Progressing fast** — 4×250m continuous (Aug 3); first OWS 594m (Jul 27) | Strava. From zero on Jul 11 |
-| Long run (recent) | 20km @ Z2, ~5:36–5:55/km, weekly (Jul 12, 26, Aug 2) | Strava — very consistent |
-| Long ride (recent) | 90–130km with up to 1139m climbing | Strava — well above plan; strong cyclist confirmed |
+| Swim | **Progressing fast** — now **2×500m continuous** (Aug 21), pyramids to 400m; 3×/week held | Strava. From zero on Jul 11 |
+| Long run (recent) | 21km (Aug 16), **23.3km (Aug 23)** @ Z2 | Strava — very consistent, volume creeping up |
+| Long ride (recent) | 100km/733m (Aug 15), 104km/828m (Aug 22) | Strava — above plan; strong cyclist confirmed |
+| Mid-week bike | ✅ **Old gap fixed** — sweet-spot done W33 (2×15) + W34 (3×12) @ 210–225W, power held | Strava |
 
 ### Bike Power Zones (Coggan, FTP 238W — set 2026-07-03)
 
@@ -79,13 +80,33 @@ swim progressing faster than expected, one consistent gap (mid-week quality bike
 
 ---
 
+## Review — W33→W34 (spot-check 2026-08-24)
+
+Pulled Strava Jul 27–Aug 23. **Adherence excellent; W28→W32 gaps closed.**
+
+- **Mid-week quality bike gap is fixed** — the #1 fix from last review. W33 (2×15) and W34
+  (3×12) sweet-spot rides both done at 210–225W, power held. Volleyball gone, Thursday clear.
+- **Bike + run tracking above plan** — long rides 100–104km/730–830m; long runs 21km→23.3km.
+- **Swim strong** — 2×500m continuous, pyramids; 3×/week consistent.
+- ⚠️ **OW block behind** — planned Friday open-water swims (Aug 14, 21) were done in the
+  **pool** both weeks. Only 1 true OWS (Jul 27). OW season closes ~Oct + camp eats a week →
+  **prioritize OW on W37/W38 Fridays** while it's still possible.
+- ⚠️ **Long-run HR "unstable" on Aug 23** (23km, end of triple) — likely accumulated
+  fatigue/heat; watch it doesn't recur when fresh.
+- **Actual gym reality vs docs**: Strava shows **legs Tue / upper Wed / swim Mon** (not the
+  Mon-upper/Tue-swim the old plan files implied). The new W37 structure resolves this: legs
+  → Wed, upper → Thu, swim stays Mon. Docs updated 2026-08-24.
+
+---
+
 ## Next Actions
 
 - [ ] **W36 FTP retest (Sat Sep 5)** — 20-min test on fresh legs → reset power zones (still worth it: the 238W was on tired legs)
 - [~] Run threshold test — **downgraded to optional** (2026-08-04). Run zones now anchored to the real Dec 31 5k (HRmax 192 / threshold ~178). A hard parkrun or 30-min effort anytime would confirm the current threshold-HR line; no scheduled test needed
-- [ ] **Protect the Thursday sweet-spot ride** in W33–35 (the recurring adherence gap)
+- [x] ~~Protect the Thursday sweet-spot ride~~ — ✅ done W33/W34, gap closed
+- [ ] **Prioritize open-water swims on W37/W38 Fridays** — OW block behind (Aug OWS became pool swims); season closes ~Oct and the camp costs a week
 - [ ] Schedule the first **swim CSS test** (400m + 200m TT) — overdue per macro cadence;
-  slot ~late Aug/early Sep once continuous 400m is comfortable
+  continuous 500m is now comfortable, so slot it ~W37 (a good re-entry benchmark)
 - [ ] **Buy indoor smart trainer by 2026-10-31** (ADR 0004) — Build 2 winter block depends on it
 - [ ] After W36 tests: update this file's zones, re-derive sweet-spot/tempo bands + run pace
 
@@ -93,14 +114,26 @@ swim progressing faster than expected, one consistent gap (mid-week quality bike
 
 | Week | File | Status |
 |------|------|--------|
-| 2026-W32 | plans/weeks/2026-W32.md | **Current** — DELOAD; 3rd swim (Wed) begins |
-| 2026-W33 | plans/weeks/2026-W33.md | Upcoming — late-base load; OW block continues; first sweet-spot bike |
-| 2026-W34 | plans/weeks/2026-W34.md | Upcoming — load week 2; heavy gym; protect Thu sweet-spot |
-| 2026-W35 | plans/weeks/2026-W35.md | Upcoming — peak of triple; 2nd brick; 2×20min sweet-spot |
+| 2026-W33 | plans/weeks/2026-W33.md | ✅ Done — sweet-spot bike landed; OW → pool |
+| 2026-W34 | plans/weeks/2026-W34.md | ✅ Done — Thu sweet-spot protected; OW → pool |
+| 2026-W35 | plans/weeks/2026-W35.md | **Current** — peak of triple; 2nd brick; 2×20min sweet-spot |
 | 2026-W36 | plans/weeks/2026-W36.md | Upcoming — DELOAD + run test (Sep 1) + FTP retest (Sep 5) |
+| 2026-W37 | plans/weeks/2026-W37.md | Written — **new 3+3 structure debuts**; final base load wk1; prioritize OW Fri |
+| 2026-W38 | plans/weeks/2026-W38.md | Written — final base load wk2; eased weekend into camp; last OW |
+| 2026-W39 | plans/weeks/2026-W39.md | Written — **VB CAMP (Sep 21–28)**; no tri training; absorbs deload |
+| 2026-W40 | plans/weeks/2026-W40.md | Written (**provisional**) — Build-1 cautious re-entry post-camp |
 
-_Next to write (~W37 onward): after the W36 tests re-anchor zones — final base block
-(W37–39) then Build 1 begins W40 (Sep 28)._
+_Next to write: **W41+ (real Build 1 progression)** — write after the camp (any niggles?) and
+after the Sep 5 FTP retest re-anchors bike zones. W40 is provisional and should be refined then._
+
+**⚠️ New weekly structure effective W37 (2026-08-24):** week reorganized to **3 swim / 3 bike /
+3 run**. Changes vs. W33–36 (which keep the old layout): swim moved Tue→**Mon**; **Tue PM =
+easy ~1h ride** (3rd bike); upper-body gym moved Mon→**Thu afternoon** (after the quality bike);
+**Fri = easy/short 3rd run, skipped in brick weeks**. Wed lower gym + Thu quality bike + Sat
+long ride + Sun long run all unchanged. The Tue ride and Fri run are *easy volume* — cut order
+if overloaded: Fri run first, then Tue ride. See `schedule/weekly-template.md`. When writing
+W37+, note this pushes to 3+3 bike/run vs. the macro's written 2+2 — watch total load after
+the deload, especially with the heavy strength block continuing.
 
 ## Milestone Status
 

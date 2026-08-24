@@ -14,6 +14,13 @@ Add entries here directly, or tell me in chat and I will update this file.
 
 ## Upcoming Events
 
+- **2026-09-21 → 09-28: Beach volleyball camp (W39 + Mon of W40)** — full-day block, whole
+  week. **No planned triathlon training** — already 2 beach-VB sessions/day, so stacking
+  swim/bike/run risks injury (macro *Load Management*: VB is real load + real injury risk).
+  Only an **optional easy run** if feeling fresh and niggle-free. Treat as a modality-swap
+  week (high physical load, not rest): W38 arrives at camp not wrecked; W40 is a cautious
+  re-entry, not a hard Build-1 launch. This camp absorbs the deload role for the W37→ block
+  (macro: deloads flex ±1 week around real-life perturbations).
 - 2026-09-05: **FTP retest** (20-min) in the W36 deload, on fresh legs. Re-anchors power zones for the final base block.
 - Run threshold test — **optional/opportunistic** (downgraded 2026-08-04). Run zones now anchored to the real Silvesterlauf 5k (2025-12-31: HRmax 192, threshold ~178). Any hard parkrun/30-min effort retro-anchors the current threshold-HR line; no scheduled test.
 
