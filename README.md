@@ -31,6 +31,8 @@ plans/
   macro.md              ← periodization skeleton, phases, milestones
   strength.md           ← periodized gym program
   weeks/YYYY-WNN.md     ← rolling detailed weekly plans
+logs/
+  reviews.md            ← dated Strava-vs-plan session reviews (append-only log)
 docs/adr/               ← architecture decision records (why the plan is shaped this way)
 scripts/
   sync_calendar.py      ← push weekly plans to Google Calendar

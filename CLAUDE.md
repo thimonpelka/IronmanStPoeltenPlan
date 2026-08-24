@@ -13,7 +13,7 @@ This repository is a training plan for Thimon Pelka's Ironman 70.3 on 2027-05-23
 5. Pull Strava activities for the last 4 weeks using the `strava-mcp` tool (`list_activities` with a `range_start` 4 weeks back). Compare against the last 2–3 weekly plan files in `plans/weeks/`.
 6. Assess: what was completed, what was missed, how load compares to phase targets.
 7. Generate detailed weekly plans for the next 3–4 weeks (if not already written), adjusting for actual completed load.
-8. Update `STATUS.md` with the current date, phase week, and any new fitness observations.
+8. Update `STATUS.md` with the current date, phase week, and any new fitness observations. Append the session's Strava-vs-plan review (what was done/missed vs. plan) to `logs/reviews.md` — keep `STATUS.md` a current-state snapshot, not a running log.
 
 ## Repository Structure
 
@@ -29,6 +29,8 @@ plans/
   strength.md           ← periodized gym program
   weeks/
     YYYY-WNN.md         ← detailed weekly plan files (ISO week format)
+logs/
+  reviews.md            ← dated Strava-vs-plan session reviews (append newest at bottom)
 scripts/
   sync_calendar.py      ← push weekly plans to Google Calendar (see README)
 docs/adr/               ← architecture decision records
