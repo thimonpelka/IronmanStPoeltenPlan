@@ -68,7 +68,7 @@ the FTP retest was compromised, and the OW block never happened.**
   → ~217 FTP, but: overheated ("brauch mehr Ventilatoren"), mispaced, mid-effort slump, and HR
   only reached 173 (threshold ~178) → a submaximal 20-min. The Sep 17 indoor 2×20 corroborates
   there's more: held **206W at HR 152–154** (easy); the HR↔power slope projects ~234W at
-  threshold HR. So zones stay at 238. **A clean retest with fans is scheduled W44 (Nov 1)** —
+  threshold HR. So zones stay at 238. **A clean retest with fans is scheduled W44 (Oct 31)** —
   it also settles whether trainer power reads the same as the outdoor meter (matters for winter
   prescriptions).
 - **⚠️ OW block 1 never materialized.** W37 and W38 Fridays were pool swims again (planned OW
@@ -78,7 +78,7 @@ the FTP retest was compromised, and the OW block never happened.**
   default. Not fixable now; flagged so April isn't the first wetsuit/OW swim.
 - **Swim progressing strongly** — 3×600m (Sep 18), 2×1km (Sep 9), 10×150 sets, ~2000–2700m
   sessions, 3×/week held. Continuous capacity is well established. **CSS test still never done**
-  (overdue since late Aug) → scheduled W41 (Oct 8) now that the stroke is clearly ready.
+  (overdue since late Aug) → scheduled W41 (Oct 7) now that the stroke is clearly ready.
 - **Run rock-solid** — long runs to 22.8km (Sep 13), tempo 2×15/3×10 Z3 hit when scheduled,
   Z2 HR stable (W40 "Puls sehr stabil"). The Aug 23 HR wobble did **not** recur — closed.
 - **VB camp (W39) executed as planned** — 7 days × 2 sessions/day beach VB, zero tri training

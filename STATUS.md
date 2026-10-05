@@ -17,8 +17,8 @@ _Last updated: 2026-10-05_
 | Metric | Value | Source |
 |--------|-------|--------|
 | 5k | **20:40** (real, Silvesterlauf 2025-12-31) — Strava still predicts ~20:42, holding | Race + Strava. HRmax 192, threshold HR ~178 |
-| **FTP** | **238W** (3.45 W/kg @ 69kg) — **kept** (see note) | Tested 2026-07-03. Sep 5 retest compromised/under-read. **Clean retest W44 (Nov 1), on trainer + fans** |
-| Swim | **Strong** — holding **3×600m, 2×1km continuous**; 10×150 CSS-type sets; 3×/week consistent | Strava. **First CSS test W41 (Oct 8)** |
+| **FTP** | **238W** (3.45 W/kg @ 69kg) — **kept** (see note) | Tested 2026-07-03. Sep 5 retest compromised/under-read. **Clean retest W44 (Oct 31), on trainer + fans** |
+| Swim | **Strong** — holding **3×600m, 2×1km continuous**; 10×150 CSS-type sets; 3×/week consistent | Strava. **First CSS test W41 (Oct 7)** |
 | Long run (recent) | 22.8km (Sep 13) @ Z2 stable HR; 17km (Oct 4) clean post-camp | Strava — durable, HR stable |
 | Long ride (recent) | 86km/650m (Sep 12), 102km/753m (Sep 19), 95km/365m (Oct 3, post-camp) | Strava — strong cyclist confirmed |
 | Mid-week bike | ✅ Sweet-spot/VO2 held — e.g. indoor 2×20 @ 206W/HR152 (easy), 2×20/3×15 outdoor | Strava |
@@ -77,8 +77,8 @@ file stays a current-state snapshot.
 
 ## Next Actions
 
-- [ ] **Swim CSS test — W41 (Oct 8)** — 400m + 200m TT → set CSS, prescribe winter swim pace. Overdue; stroke now ready.
-- [ ] **Clean FTP retest — W44 (Nov 1)** — on the trainer, **with fans**, well-paced (reach ~threshold HR). Resets zones + settles trainer-vs-outdoor power offset for winter.
+- [ ] **Swim CSS test — W41 (Oct 7)** — 400m + 200m TT → set CSS, prescribe winter swim pace. Overdue; stroke now ready.
+- [ ] **Clean FTP retest — W44 (Oct 31)** — on the trainer, **with fans**, well-paced (reach ~threshold HR). Resets zones + settles trainer-vs-outdoor power offset for winter.
 - [ ] **Restart gym W41** — no lifting logged in W40 (camp recovery); first Build lower session conservative, then progress.
 - [x] ~~Prioritize OW on W37/W38 Fridays~~ — ❌ missed (pool all weeks); season closed. Carry OW to the **April 2027 block** (treat as a hard deadline, not weather-permitting).
 - [x] ~~Indoor smart trainer setup~~ — ✅ **online since ~Sep 3** (MyWhoosh); ADR 0004 milestone effectively met.
@@ -97,7 +97,7 @@ file stays a current-state snapshot.
 | 2026-W41 | plans/weeks/2026-W41.md | **Current** — Build 1 launch: bike VO2 5×3 + **swim CSS test** |
 | 2026-W42 | plans/weeks/2026-W42.md | Written — threshold/sweet-spot (3×15); first Build brick |
 | 2026-W43 | plans/weeks/2026-W43.md | Written — peak of triple; bike VO2 4×4; brick; longest long run |
-| 2026-W44 | plans/weeks/2026-W44.md | Written — DELOAD + **clean FTP retest (Nov 1, trainer+fans)** |
+| 2026-W44 | plans/weeks/2026-W44.md | Written — DELOAD + **clean FTP retest (Oct 31, trainer+fans)** |
 
 _Next to write: **W45+** — write after the W44 FTP retest re-anchors bike zones (and settles
 the indoor-vs-outdoor offset). Build 1 continues to ~Nov 29; mid-week quality shifts to the
@@ -123,7 +123,7 @@ order if overloaded: Fri run first, then Tue ride. The body absorbed the added f
 
 | Milestone | Status |
 |-----------|--------|
-| FTP Test | ✅ 2026-07-03 (238W). Sep 5 retest compromised → **clean retest W44 (Nov 1)** |
+| FTP Test | ✅ 2026-07-03 (238W). Sep 5 retest compromised → **clean retest W44 (Oct 31)** |
 | Swim technique course | ✅ Completed 2026-07-11→17 |
 | First structured swim | ✅ Done W30 (Jul 20/24) |
 | Swim → 3×/week | ✅ Held consistently since W32 |
@@ -131,5 +131,5 @@ order if overloaded: Fri run first, then Tue ride. The body absorbed the added f
 | Open water swims | ⚠️ Only 1 done (Jul 27). OW block 1 effectively **missed** (pool all Aug–Sep); season closed → **carry to April 2027 block** |
 | Indoor smart trainer | ✅ **Online ~Sep 3** (MyWhoosh) — ADR 0004 met |
 | Run threshold field test | Optional — zones anchored to Dec 31 5k; Z2 HR confirmed stable |
-| Swim CSS test | **Scheduled W41 (Oct 8)** — first one; retest ~early Dec |
+| Swim CSS test | **Scheduled W41 (Oct 7)** — first one; retest ~early Dec |
 | Race day | 2027-05-23 |
