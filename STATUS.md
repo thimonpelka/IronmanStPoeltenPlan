@@ -1,35 +1,39 @@
 # Training Status
 
-_Last updated: 2026-10-05_
+_Last updated: 2026-11-02_
 
 ## Current State
 
 | Field | Value |
 |-------|-------|
-| Phase | **Build 1 (Phase 2)** — entered W40 (re-entry); real launch W41 |
-| Phase week | Build 1 wk 2 of ~9 (W41) |
-| Plan week | 2026-W41 (Oct 5–11) — Build 1 real launch: first bike VO2 + swim CSS test |
-| Loading cycle | 3:1. **W40 re-entry (light) → W41–43 loading triple (current) → W44 deload + clean FTP retest.** Camp (W39) absorbed the Base-block deload |
-| Weeks to race | ~33 |
+| Phase | **Build 1 (Phase 2)** — triple 2 (final Build 1 triple) |
+| Phase week | Build 1 wk 6 of ~9 (W45) |
+| Plan week | 2026-W45 (Nov 2–8) — triple 2 launch: sweet-spot + threshold, long run rebuild |
+| Loading cycle | 3:1. **W41–43 loading triple ✅ → W44 deload ✅ → W45–47 loading triple (current) → W48 deload closes Build 1.** Build 2 starts W49 (Nov 30) |
+| Weeks to race | ~29 |
 
 ## Fitness Snapshot (from Strava, reviewed 2026-10-05)
 
 | Metric | Value | Source |
 |--------|-------|--------|
 | 5k | **20:40** (real, Silvesterlauf 2025-12-31) — Strava still predicts ~20:42, holding | Race + Strava. HRmax 192, threshold HR ~178 |
-| **FTP** | **238W** (3.45 W/kg @ 69kg) — **kept** (see note) | Tested 2026-07-03. Sep 5 retest compromised/under-read. **Clean retest W44 (Oct 31), on trainer + fans** |
-| Swim | **Strong** — holding **3×600m, 2×1km continuous**; 10×150 CSS-type sets; 3×/week consistent | Strava. **First CSS test W41 (Oct 7)** |
+| **FTP** | **238W** (3.45 W/kg @ 69kg) — **kept; no near-term retest** (see note) | Tested 2026-07-03. Sep 5 retest compromised; Oct 31 skipped. **Retest declined 2026-11-02** (zones ≈ 2 months ago, training fine on them) → deferred/opportunistic |
+| Swim | **Strong** — **CSS = 1:43/100m** (tested Oct 7); holding 3×600m/2×1km continuous; 3×/week consistent | Strava. CSS test done W41 (400m 6:27 / 200m 3:02); retest ~early Dec |
 | Long run (recent) | 22.8km (Sep 13) @ Z2 stable HR; 17km (Oct 4) clean post-camp | Strava — durable, HR stable |
 | Long ride (recent) | 86km/650m (Sep 12), 102km/753m (Sep 19), 95km/365m (Oct 3, post-camp) | Strava — strong cyclist confirmed |
 | Mid-week bike | ✅ Sweet-spot/VO2 held — e.g. indoor 2×20 @ 206W/HR152 (easy), 2×20/3×15 outdoor | Strava |
 | **Indoor trainer** | ✅ **ONLINE** (MyWhoosh, ~Sep 3) — winter riding + steady-power intervals unlocked (ADR 0004) | Strava VirtualRides |
 
-**FTP — why it stays 238W:** the Sep 5 MyWhoosh retest read 229W/20min (→ ~217 FTP) but was a
-submaximal, compromised effort — overheated, mispaced, mid-effort slump, HR peaked at only 173
-(threshold ~178). The Sep 17 indoor 2×20 confirms headroom: **206W held at HR 152–154** (easy),
-and the HR↔power slope projects ~234W at threshold HR. So 238W is retained. The **clean retest
-(W44, on the trainer with fans)** will confirm the ceiling *and* settle whether trainer power
-reads the same as the outdoor meter — which matters once winter rides go indoors by default.
+**FTP — why it stays 238W (and why no retest now):** the Sep 5 MyWhoosh retest read 229W/20min
+(→ ~217 FTP) but was a submaximal, compromised effort — overheated, mispaced, mid-effort slump,
+HR peaked at only 173 (threshold ~178). The Sep 17 indoor 2×20 confirms headroom: **206W held at
+HR 152–154** (easy), and the HR↔power slope projects ~234W at threshold HR. The W44 (Oct 31)
+retest slot went unused. On 2026-11-02 Thimon **declined a near-term retest** — the zones should
+be roughly where they were two months ago and the Build 1 sweet-spot/VO2 work has been landing
+fine on 238W, so there's no case for re-testing now. **FTP stays 238W; retest is opportunistic**
+(revisit if the prescribed watts start feeling off vs HR/RPE). One open item left unanswered: the
+trainer-vs-outdoor power offset — we proceed on 238W-based watts, which have been empirically
+working on MyWhoosh.
 
 ### Bike Power Zones (Coggan, FTP 238W — set 2026-07-03)
 
@@ -77,13 +81,13 @@ file stays a current-state snapshot.
 
 ## Next Actions
 
-- [ ] **Swim CSS test — W41 (Oct 7)** — 400m + 200m TT → set CSS, prescribe winter swim pace. Overdue; stroke now ready.
-- [ ] **Clean FTP retest — W44 (Oct 31)** — on the trainer, **with fans**, well-paced (reach ~threshold HR). Resets zones + settles trainer-vs-outdoor power offset for winter.
-- [ ] **Restart gym W41** — no lifting logged in W40 (camp recovery); first Build lower session conservative, then progress.
-- [x] ~~Prioritize OW on W37/W38 Fridays~~ — ❌ missed (pool all weeks); season closed. Carry OW to the **April 2027 block** (treat as a hard deadline, not weather-permitting).
-- [x] ~~Indoor smart trainer setup~~ — ✅ **online since ~Sep 3** (MyWhoosh); ADR 0004 milestone effectively met.
-- [~] Run threshold test — remains **optional/opportunistic**; zones anchored to the Dec 31 5k. Z2 HR confirmed stable (Aug 23 wobble did not recur).
-- [ ] After the W44 FTP retest: update zones here, re-derive sweet-spot/tempo/VO2 bands, note the indoor FTP, then write W45+.
+- [ ] **Protect the W47 Sunday long run** — the equivalent peak-of-triple long run was skipped in W43; don't repeat.
+- [ ] **Schedule swim CSS retest** (~early Dec) — ~6–8 weeks after the Oct 7 test (CSS 1:43/100m).
+- [x] ~~Clean FTP retest~~ — **declined 2026-11-02**; FTP kept at 238W, retest opportunistic (not scheduled).
+- [x] ~~Thursday-morning volleyball recurring?~~ — Thimon: **not fixed**, don't plan around it; he'll adjust the real plan ad hoc. Friday volleyball (12–14) is standing → Friday run dropped Nov–Mar.
+- [x] ~~Swim CSS test (W41)~~ — ✅ done Oct 7, **CSS = 1:43/100m**.
+- [x] ~~Restart gym W41~~ — ✅ lower + upper logged consistently W41–W44.
+- [~] Run threshold test — remains **optional/opportunistic**; zones anchored to the Dec 31 5k. Z2 HR stable.
 
 ## Detailed Plans Generated
 
@@ -94,14 +98,19 @@ file stays a current-state snapshot.
 | 2026-W38 | plans/weeks/2026-W38.md | ✅ Done — full structure, upper gym hit; OW → pool |
 | 2026-W39 | plans/weeks/2026-W39.md | ✅ Done — **VB CAMP**; zero tri training; absorbed deload |
 | 2026-W40 | plans/weeks/2026-W40.md | ✅ Done — clean post-camp re-entry (Sat 95km, no niggles) |
-| 2026-W41 | plans/weeks/2026-W41.md | **Current** — Build 1 launch: bike VO2 5×3 + **swim CSS test** |
-| 2026-W42 | plans/weeks/2026-W42.md | Written — threshold/sweet-spot (3×15); first Build brick |
-| 2026-W43 | plans/weeks/2026-W43.md | Written — peak of triple; bike VO2 4×4; brick; longest long run |
-| 2026-W44 | plans/weeks/2026-W44.md | Written — DELOAD + **clean FTP retest (Oct 31, trainer+fans)** |
+| 2026-W41 | plans/weeks/2026-W41.md | ✅ Done — Build 1 launch: bike VO2 5×3 ✅ + **CSS test ✅ (1:43/100m)** |
+| 2026-W42 | plans/weeks/2026-W42.md | ✅ Done — run VO2 ✅, brick ✅ (1023m); ⚠️ Thu bike missed (volleyball), 2 swims |
+| 2026-W43 | plans/weeks/2026-W43.md | ✅ Done — bike VO2 4×4 ✅, brick ✅; ⚠️ **Sun long run skipped** |
+| 2026-W44 | plans/weeks/2026-W44.md | ✅ Done (deload) — ⚠️ **FTP retest skipped** (→ moved to W45) |
+| 2026-W45 | plans/weeks/2026-W45.md | **Current** — triple 2 launch: sweet-spot 3×15 + threshold; Fri run→volleyball |
+| 2026-W46 | plans/weeks/2026-W46.md | Written — run VO2 6×3 + sweet-spot 3×18; brick |
+| 2026-W47 | plans/weeks/2026-W47.md | Written — peak: bike VO2 5×4; brick; longest long run (protect it) |
+| 2026-W48 | plans/weeks/2026-W48.md | Written — DELOAD, closes Build 1 |
 
-_Next to write: **W45+** — write after the W44 FTP retest re-anchors bike zones (and settles
-the indoor-vs-outdoor offset). Build 1 continues to ~Nov 29; mid-week quality shifts to the
-trainer by default as December nears (ADR 0004)._
+_Next to write: **W49+ (Build 2 launch)** — write after the W48 deload, off the W45 FTP. Build 2
+= threshold emphasis + brick progression; mid-week quality ride on the trainer by default as
+winter sets in (ADR 0004). **🏐 Friday beach volleyball 12–14 is standing through ~end of March
+2027 → Friday run stays dropped.**_
 
 **🔒 Locked W45+ quality template (agreed 2026-10-05):** per 3-week loading triple —
 **bike = 2 sweet-spot + 1 VO2** (sweet-spot bias per macro; the single VO2 is the ceiling-touch,
@@ -112,18 +121,18 @@ so bike and run VO2 never fall in the same week. _Rationale: bike VO2 is the FTP
 priority lever; a 70.3 run is raced at tempo, so threshold > VO2 for run specificity. This
 differs from the W41–43 triple, which front-loaded bike VO2 (2 VO2 + 1 SS) to open the block._
 
-**✅ Weekly structure (3 swim / 3 bike / 3 run) — proven in W37/W38/W40.** Layout: swim
-**Mon/Wed/Fri**; **Tue** AM quality run + PM easy ride; **Wed** lower gym (06:30) + swim;
-**Thu** quality bike + upper gym after; **Fri** easy swim + easy 3rd run (**skipped in brick
-weeks**); **Sat** long ride/brick; **Sun** long run. Tue ride + Fri run are *easy volume* — cut
-order if overloaded: Fri run first, then Tue ride. The body absorbed the added frequency well
-(no fatigue flags across the final base block). See `schedule/weekly-template.md`.
+**✅ Weekly structure (3 swim / 3 bike / 2–3 run).** Layout: swim **Mon/Wed/Fri**; **Tue** AM
+quality run + PM easy ride; **Wed** lower gym (06:30) + swim; **Thu** quality bike + upper gym
+after; **Fri** 🏐 beach volleyball 12–14 + easy swim (**Friday run dropped Nov 2026→Mar 2027**);
+**Sat** long ride/brick; **Sun** long run. Non-brick weeks = 2 runs (Tue + Sun); brick weeks = 3
+(Tue + Sat brick + Sun). Cut order if overloaded: **Tue ride first** (Fri run already gone). See
+`schedule/weekly-template.md`.
 
 ## Milestone Status
 
 | Milestone | Status |
 |-----------|--------|
-| FTP Test | ✅ 2026-07-03 (238W). Sep 5 retest compromised → **clean retest W44 (Oct 31)** |
+| FTP Test | ✅ 2026-07-03 (238W). Sep 5 compromised, Oct 31 skipped. **Retest declined 2026-11-02 → opportunistic** |
 | Swim technique course | ✅ Completed 2026-07-11→17 |
 | First structured swim | ✅ Done W30 (Jul 20/24) |
 | Swim → 3×/week | ✅ Held consistently since W32 |
@@ -131,5 +140,5 @@ order if overloaded: Fri run first, then Tue ride. The body absorbed the added f
 | Open water swims | ⚠️ Only 1 done (Jul 27). OW block 1 effectively **missed** (pool all Aug–Sep); season closed → **carry to April 2027 block** |
 | Indoor smart trainer | ✅ **Online ~Sep 3** (MyWhoosh) — ADR 0004 met |
 | Run threshold field test | Optional — zones anchored to Dec 31 5k; Z2 HR confirmed stable |
-| Swim CSS test | **Scheduled W41 (Oct 7)** — first one; retest ~early Dec |
+| Swim CSS test | ✅ 2026-10-07 — **CSS 1:43/100m**; retest ~early Dec |
 | Race day | 2027-05-23 |

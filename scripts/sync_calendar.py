@@ -104,34 +104,59 @@ def parse_duration_minutes(text):
         return int(m.group(1))
     return None
 
+# Sport keywords, in priority order. Matched on word boundaries so a keyword
+# can't fire inside an unrelated word (e.g. 'ride' inside 'strides').
+SPORT_KEYWORDS = [
+    ('swim', 'swim'),
+    ('volleyball', 'volleyball'), ('beach', 'volleyball'),
+    ('gym', 'gym'), ('weights', 'gym'), ('weight', 'gym'), ('strength', 'gym'),
+    # 'brick' and 'spin' before 'run' so a brick/spin isn't mislabelled a run
+    ('brick', 'ride'), ('spin', 'ride'), ('trainer', 'ride'),
+    ('ride', 'ride'), ('bike', 'ride'), ('ftp', 'ride'), ('cycling', 'ride'),
+    ('run', 'run'), ('jog', 'run'),
+]
+
 def detect_sport(text):
-    for keyword, sport in [
-        ('swim', 'swim'),
-        ('volleyball', 'volleyball'), ('beach', 'volleyball'),
-        ('gym', 'gym'), ('weight', 'gym'), ('strength', 'gym'),
-        # 'brick' and 'spin' before 'run' so a brick/spin isn't mislabelled a run
-        ('brick', 'ride'), ('spin', 'ride'), ('trainer', 'ride'),
-        ('ride', 'ride'), ('bike', 'ride'), ('ftp', 'ride'), ('cycling', 'ride'),
-        ('run', 'run'),
-    ]:
-        if keyword in text.lower():
+    text_lower = text.lower()
+    for keyword, sport in SPORT_KEYWORDS:
+        if re.search(rf'\b{re.escape(keyword)}\b', text_lower):
             return sport
     return None
 
-def default_time_and_duration(day_abbr, title):
-    """Return (HH:MM, duration_minutes) based on day of week + session keywords."""
-    sport = detect_sport(title)
+# Default start time by day-part slot label (e.g. "Afternoon — Easy ride").
+# When a session names its slot, that wins over the sport/day defaults below.
+SLOT_TIME = {'Morning': None, 'Afternoon': '17:00', 'Evening': '18:30', 'Night': '20:00'}
+
+def default_duration(day_abbr, sport):
+    """Default session length (minutes) by sport, with a few day-specific cases."""
     if sport == 'gym':
-        return '06:30', 60
+        return 60
     if sport == 'volleyball':
-        return '17:00', 120
+        return 120
     if sport == 'swim':
-        return ('10:00', 60) if day_abbr == 'Sat' else ('17:00', 60)
+        return 60
     if sport == 'ride':
-        return ('08:00', 195) if day_abbr == 'Sat' else ('08:00', 90)
+        return 195 if day_abbr == 'Sat' else 90
     if sport == 'run':
-        return ('08:00', 110) if day_abbr == 'Sun' else ('08:00', 60)
-    return '08:00', 60
+        return 110 if day_abbr == 'Sun' else 60
+    return 60
+
+def default_time(day_abbr, sport, slot=None):
+    """Default start time. A slot label (Afternoon/Evening/…) wins when present."""
+    if slot and SLOT_TIME.get(slot):
+        return SLOT_TIME[slot]
+    if sport == 'gym':
+        return '06:30'
+    if sport == 'volleyball':
+        return '17:00'
+    if sport == 'swim':
+        return '10:00' if day_abbr == 'Sat' else '17:00'
+    return '08:00'  # ride / run / unknown → morning default
+
+def default_time_and_duration(day_abbr, title, slot=None):
+    """Return (HH:MM, duration_minutes) based on day of week, sport, and slot label."""
+    sport = detect_sport(title)
+    return default_time(day_abbr, sport, slot), default_duration(day_abbr, sport)
 
 def is_session_paragraph(para):
     """True if a paragraph is a session header (not an inline description label)."""
@@ -195,10 +220,6 @@ def parse_week_file(path):
 
             bold_text = bold_m.group(1)
 
-            # Skip rest days
-            if re.match(r'rest\b', bold_text, re.IGNORECASE):
-                continue
-
             # Detect explicit time prefix: "06:30 — Title" or "~17:00 — Title"
             time_m = re.match(r'~?\s*(\d{1,2}:\d{2})\s*[—–-]+\s*(.+)', bold_text)
             if time_m:
@@ -208,17 +229,29 @@ def parse_week_file(path):
                 explicit_time = None
                 title         = bold_text.strip()
 
-            # Strip a leading slot-label prefix ("Afternoon — Swim" → "Swim"),
+            # Capture and strip a leading slot label ("Afternoon — Swim" → "Swim"),
             # but only when the day-part word is directly followed by the dash
-            # (so "Morning Run — Tempo" keeps its "Morning Run" name).
-            title = re.sub(r'^(Morning|Afternoon|Evening|Night)\s*[—–-]+\s*', '', title)
+            # (so "Morning Run — Tempo" keeps its "Morning Run" name). The slot
+            # drives the default start time when no explicit time is given.
+            slot_m = re.match(r'(Morning|Afternoon|Evening|Night)\s*[—–-]+\s*', title)
+            slot   = slot_m.group(1) if slot_m else None
+            if slot_m:
+                title = title[slot_m.end():].strip()
 
-            sport             = detect_sport(title)
-            full_text         = '\n\n'.join(session_paras)
-            duration_min      = parse_duration_minutes(full_text)
-            def_time, def_dur = default_time_and_duration(day_abbr, title)
+            sport = detect_sport(title)
+
+            # Skip genuine rest days — but not sessions like "Rest or easy swim"
+            # that name a real sport and should still land on the calendar.
+            if sport is None and re.match(r'(full|complete|total)?\s*rest\b', title, re.IGNORECASE):
+                continue
+
+            full_text = '\n\n'.join(session_paras)
+            # Parse the duration from the header line only. The body often mentions
+            # incidental hour figures (e.g. a note "~24h before Wed heavy legs") that
+            # would otherwise be read as the session length and overrun the day.
+            def_time, def_dur = default_time_and_duration(day_abbr, title, slot)
+            duration_min      = parse_duration_minutes(first_line) or def_dur
             start_time        = explicit_time or def_time
-            duration_min      = duration_min or def_dur
 
             # Strip markdown bold markers for a clean calendar description
             clean_text  = re.sub(r'\*\*(.+?)\*\*', r'\1', full_text)

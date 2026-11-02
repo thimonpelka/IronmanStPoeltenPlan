@@ -88,3 +88,48 @@ the FTP retest was compromised, and the OW block never happened.**
   → cleared to launch real Build 1 in W41. One gap: **no gym logged in all of W40** (camp
   recovery) → W41 restarts lifting with a conservative first lower session.
 - **Load**: W37 ~14h, W38 ~13h, camp (very high VB load), W40 ~9–10h re-entry — sensible shape.
+
+---
+
+## Review — W41→W44 (done 2026-11-02)
+
+Pulled Strava Oct 5–Nov 2, compared to the W41–W44 plans. **Headline: Build 1 triple 1 executed
+well, CSS test done — but the clean FTP retest slipped again, one peak long run was skipped, and
+beach volleyball has returned as a standing 2×/week load.**
+
+- **W41 (launch) — fully adherent.** Bike VO2 5×3 ✅, **swim CSS test done** (400m 6:27 /
+  200m 3:02 → **CSS ≈ 1:43/100m**), threshold run 3×10 Z3, long ride 83km/640m (trainer), long
+  run 22.5km with a race-pace finish. Gym restarted cleanly. Best-launched block week yet.
+- **W42 (run VO2 + sweet-spot, brick).** Run VO2 5×3 ✅, **brick ✅ and strong** — 88km/**1023m**
+  outdoor + 4.3km off the bike. ⚠️ **Thursday sweet-spot bike missed** — replaced by 4h beach
+  volleyball Thu morning. Only **2 swims** (Mon swim missed). Long run 22km ✅.
+- **W43 (peak — bike VO2, brick).** Threshold run 2×15 ✅, **bike VO2 4×4 done ✅** (hit it even
+  with 3h Thu-morning volleyball beforehand — impressive), brick 81km + 4.5km ✅. ⚠️ **Sunday
+  long run (the longest of the block, 21–23km) was skipped entirely** — peak-of-triple fatigue +
+  volleyball load. Flagged for W47: protect the equivalent long run this time.
+- **W44 (deload). ⚠️ The clean FTP retest did NOT happen** — the Saturday test slot became a Z2
+  1:30 MyWhoosh ride. This is the second slip (Sep 5 compromised, Oct 31 skipped). **FTP stays
+  238W, zones unchanged.** → Rescheduled to **W45 Thu (Nov 5)**; post-deload legs are actually
+  the ideal fresh slot. Rest of the deload was clean (easy swims, light legs gym, Sun 14.6km).
+- **🏐 Beach volleyball is back as a standing load** — ~2×/week through October: **Thursday
+  morning** (3–4h) + **Friday midday** (~2h). The Thursday sessions have twice collided with the
+  quality bike (missed in W42; survived in W43). Thimon confirmed **Friday ~12:00–14:00 is now a
+  standing commitment through ~end of March 2027** → the **Friday easy run is dropped** for that
+  stretch (updated CLAUDE.md, weekly-template, irregular-events). *Open question flagged to
+  Thimon: is the Thursday-morning volleyball also recurring? If so the Thursday quality bike
+  needs protecting/rescheduling.* **→ Resolved 2026-11-02: Thursday volleyball is NOT fixed —
+  don't plan around it; Thimon adjusts the real plan ad hoc if it happens.**
+- **Swim strong + consistent** — 3×/week held (bar the W42 Mon miss), ~2000–2350m/session, CSS
+  ~1:43/100m anchored. Easy swims run ~1:41–1:49/100m (close to CSS even when "easy").
+- **Run + bike tracking at plan** — long runs 22–22.5km durable, bricks regular with real
+  climbing, bike VO2/threshold hit. The run limiter remains durability/consistency of the long
+  run under fatigue, not fitness.
+- **Load**: W41 ~13–14h, W42/W43 ~13–14h + ~6h volleyball each, W44 deload ~8–9h. Volleyball is
+  pushing real weekly load high — watch for it displacing key sessions (as it did the W42 bike).
+
+**Adjustments made:** wrote W45–W48 (triple 2 + deload, closing Build 1); dropped the Friday run
+Nov→Mar for volleyball; W47 explicitly protects the Sunday long run. **FTP retest declined
+(2026-11-02)** — Thimon isn't a fan of testing and judges the zones ≈ where they were two months
+ago, so FTP stays 238W and the retest is now opportunistic (no scheduled date); W45 Thursday
+became a normal sweet-spot ride and the triple's bike quality distributes cleanly as 2 SS + 1 VO2
+(W45/W46 SS, W47 VO2).

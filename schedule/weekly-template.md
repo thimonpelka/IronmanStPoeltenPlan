@@ -40,11 +40,15 @@ older layout._
   leg load, so it doesn't touch the intervals. (Moved here from Monday.)
 
 ### Friday
-- No fixed commitments
-- **Easy/OW swim** — in OW season (Aug–Oct) this is the open-water swim.
-- **3rd run — easy and short (30–45min, Z1–low Z2).** Base-building aerobic volume, kept
-  gentle to protect the weekend block. **Skipped in brick weeks** (the Saturday brick already
-  carries a run, keeping the week at max 3 runs). Second cut if load runs high (after the Tue ride).
+- **🏐 Beach volleyball ~12:00–14:00** — standing commitment **Nov 2026 → ~end of March 2027**
+  (restarted 2026-11-06). Treat as ~2h real leg load.
+- **Easy swim** — the 3rd of the 3×/week swims. Do it in the morning before volleyball or the
+  evening after. (In OW season, Aug–Oct, this was the open-water swim.)
+- **3rd run — easy and short (30–45min, Z1–low Z2)** — base-building aerobic volume.
+  **DROPPED Nov 2026 → end of March 2027** while Friday volleyball runs (volleyball is the Friday
+  leg load). Was already **skipped in brick weeks** anyway, and most Build/Peak weeks are brick
+  weeks — so this mostly formalizes it. When volleyball ends (~Apr 2027), the Friday easy run
+  returns on non-brick weeks (second cut if load runs high, after the Tue ride).
 
 ### Saturday
 - No fixed commitments
@@ -66,14 +70,17 @@ older layout._
 | Tue | Run (AM, quality) + Easy ride (PM) | Quality run + 3rd bike (easy) |
 | Wed | Lower gym (06:30) + Swim (eve) | Primary strength + 1 of 3× swim |
 | Thu | Quality bike (intervals) + Upper gym (after) | Sweet-spot/threshold + strength |
-| Fri | Easy/OW swim + Easy run | 1 of 3× swim + 3rd run (skip in brick weeks) |
+| Fri | Beach volleyball (12–14, Nov–Mar) + Easy swim | 🏐 + 1 of 3× swim · **3rd run dropped Nov–Mar** |
 | Sat | Long Ride (or Brick) | Endurance |
 | Sun | Long Run | Endurance |
 
-Weekly totals: **swim 3× (Mon/Wed/Fri), bike 3× (Tue/Thu/Sat), run 3× (Tue/Fri/Sun), gym 2×
-(Wed/Thu)**. The Tuesday ride and Friday run are deliberately *easy* aerobic-volume additions —
-keep them gentle. If load runs high (poor sleep/legs/HRV), cut order is: **Friday run first,
-then the Tuesday ride.** In brick weeks the Friday run drops automatically (max 3 runs/week).
+Weekly totals: **swim 3× (Mon/Wed/Fri), bike 3× (Tue/Thu/Sat), run 2–3× (Tue/Sun, + Sat brick
+run in brick weeks), gym 2× (Wed/Thu)**. The Tuesday ride is a deliberately *easy* aerobic-volume
+addition — keep it gentle. **Nov 2026 → end of March 2027 the Friday run is dropped** (Friday
+volleyball is the Friday leg load), so non-brick weeks carry 2 runs and brick weeks carry 3 (Tue
++ Sat brick + Sun). If load runs high (poor sleep/legs/HRV), the **Tuesday ride is now the first
+cut** (the Friday run is already gone). When volleyball ends (~Apr 2027), the Friday run returns
+and the old cut order (Friday run first, then Tuesday ride) resumes.
 
 ---
 
